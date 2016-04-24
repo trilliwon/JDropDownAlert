@@ -20,7 +20,6 @@ class ViewController: UIViewController {
     
     JDropDownAlert.alertWithTitle("Hey, Beautiful!",
                                   message: "Could you pass me a bottle of water?",
-                                  backgroundColor: UIColor.blackColor(),
                                   delay: nil,
                                   duration: nil,
                                   height: 70)
