@@ -3,9 +3,6 @@
 Simple Alert inspiration from RKDropDownAlert. 
 Actually a swift version of [RKDropDownAlert!](https://github.com/cwRichardKim/RKDropdownAlert)
 
-
-[![CI Status](http://img.shields.io/travis/trillione/JDropDownAlert.svg?style=flat)](https://travis-ci.org/trillione/JDropDownAlert)
-
 ## Usage
 
 You can download and add the JDropDownAlert.swift file to your project.
