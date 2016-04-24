@@ -7,18 +7,10 @@
 
 ## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+You can download and add the JDropDownAlert.swift file to your project.
 
 ## Requirements
 
-## Installation
-
-JDropDownAlert is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod "JDropDownAlert"
-```
 
 ## Author
 
