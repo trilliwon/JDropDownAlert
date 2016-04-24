@@ -6,7 +6,10 @@
 
 You can download and add the JDropDownAlert.swift file to your project.
 
-## Requirements
+## Demo
+
+
+![alt tag](https://cloud.githubusercontent.com/assets/14218787/14765788/a2535a14-0a2c-11e6-8b4f-3a531432bc3a.gif)
 
 
 ## Author
