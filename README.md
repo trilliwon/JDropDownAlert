@@ -1,8 +1,6 @@
 # JDropDownAlert
 
-#####Inspiration from [RKDropDownAlert](https://github.com/cwRichardKim/RKDropdownAlert).
-
-#####Actually a Swift version of [RKDropDownAlert](https://github.com/cwRichardKim/RKDropdownAlert).
+#####Inspiration from RKDropDownAlert
 
 ## Usage
 
