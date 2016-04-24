@@ -21,8 +21,30 @@ public class func alertWithTitle(title: String,
                             delay: Double?,
                             duration: Double?,
                             height: CGFloat?)
+public class func alertWithTitle(title: String,
+                            message: String,
+                            delay: Double?,
+                            duration: Double?,
+                            height: CGFloat?)
                             
+public class func alertWithTitle(title: String,
+                            message: String,
+                            textColor: UIColor,
+                            delay: Double?,
+                            duration: Double?,
+                            height: CGFloat?)
                             
+public class func alertWithTitle(title: String,
+                            message: String,
+                            backgroundColor: UIColor,
+                            delay: Double?,
+                            duration: Double?,
+                            height: CGFloat?)
+                            
+public class func setDropDownAlertTextFont(titleFontName: String,
+                                      titleFontSize: CGFloat,
+                                      messageFontName: String,
+                                      messageFontSize: CGFloat)
 ```
 Download and add the JDropDownAlert.swift file to your project.
 
