@@ -1,9 +1,6 @@
 # JDropDownAlert
 
 [![CI Status](http://img.shields.io/travis/trillione/JDropDownAlert.svg?style=flat)](https://travis-ci.org/trillione/JDropDownAlert)
-[![Version](https://img.shields.io/cocoapods/v/JDropDownAlert.svg?style=flat)](http://cocoapods.org/pods/JDropDownAlert)
-[![License](https://img.shields.io/cocoapods/l/JDropDownAlert.svg?style=flat)](http://cocoapods.org/pods/JDropDownAlert)
-[![Platform](https://img.shields.io/cocoapods/p/JDropDownAlert.svg?style=flat)](http://cocoapods.org/pods/JDropDownAlert)
 
 ## Usage
 
