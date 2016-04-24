@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'JDropDownAlert_Example', :exclusive => true do
+  pod 'JDropDownAlert', :path => '../'
+end
+
+target 'JDropDownAlert_Tests', :exclusive => true do
+  pod 'JDropDownAlert', :path => '../'
+
+  pod 'FBSnapshotTestCase'
+end
