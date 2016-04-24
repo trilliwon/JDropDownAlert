@@ -20,4 +20,3 @@ trillione, trillione1024@gmail.com
 ## License
 
 JDropDownAlert is available under the MIT license. See the LICENSE file for more info.
-# JDropDownAlert
