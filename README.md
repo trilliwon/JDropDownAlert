@@ -1,11 +1,12 @@
 # JDropDownAlert
 
-Inspiration from [RKDropDownAlert](https://github.com/cwRichardKim/RKDropdownAlert).\n
-Actually a swift version of [RKDropDownAlert](https://github.com/cwRichardKim/RKDropdownAlert)
+#####Inspiration from [RKDropDownAlert](https://github.com/cwRichardKim/RKDropdownAlert).
+
+#####Actually a Swift version of [RKDropDownAlert](https://github.com/cwRichardKim/RKDropdownAlert).
 
 ## Usage
 
-You can download and add the JDropDownAlert.swift file to your project.
+Download and add the JDropDownAlert.swift file to your project.
 
 ## Demo
 
