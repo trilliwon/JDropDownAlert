@@ -1,6 +1,6 @@
 # JDropDownAlert
 
-Simple Alert inspiration from RKDropDownAlert. 
+Inspiration from [RKDropDownAlert](https://github.com/cwRichardKim/RKDropdownAlert)
 Actually a swift version of [RKDropDownAlert](https://github.com/cwRichardKim/RKDropdownAlert)
 
 ## Usage
