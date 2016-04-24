@@ -4,6 +4,24 @@
 
 ## Usage
 
+```Swift
+public class func alertWithTitle(title: String,
+                            delay: Double?,
+                            duration: Double?,
+                            height: CGFloat?)
+                            
+public class func alertWithTitle(title: String,
+                            textColor: UIColor,
+                            delay: Double?,
+                            duration: Double?,
+                            height: CGFloat?)
+public class func alertWithTitle(title: String,
+                            backgroundColor: UIColor,
+                            delay: Double?,
+                            duration: Double?,
+                            height: CGFloat?)
+                            
+```
 Download and add the JDropDownAlert.swift file to your project.
 
 ## Demo
