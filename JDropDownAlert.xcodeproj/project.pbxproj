@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB5FAFA41CC8F48C0042D742 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5FAFA31CC8F48C0042D742 /* AppDelegate.swift */; };
+		DB5FAFA61CC8F48C0042D742 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5FAFA51CC8F48C0042D742 /* ViewController.swift */; };
+		DB5FAFA91CC8F48C0042D742 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB5FAFA71CC8F48C0042D742 /* Main.storyboard */; };
+		DB5FAFAC1CC8F48C0042D742 /* JDropDownAlert.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB5FAFAA1CC8F48C0042D742 /* JDropDownAlert.xcdatamodeld */; };
+		DB5FAFAE1CC8F48C0042D742 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB5FAFAD1CC8F48C0042D742 /* Assets.xcassets */; };
+		DB5FAFB11CC8F48C0042D742 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB5FAFAF1CC8F48C0042D742 /* LaunchScreen.storyboard */; };
+		DB5FAFBC1CC8F48C0042D742 /* JDropDownAlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5FAFBB1CC8F48C0042D742 /* JDropDownAlertTests.swift */; };
+		DB5FAFC71CC8F48C0042D742 /* JDropDownAlertUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5FAFC61CC8F48C0042D742 /* JDropDownAlertUITests.swift */; };
+		DB5FAFD61CC8F4AC0042D742 /* JDropDownAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5FAFD51CC8F4AC0042D742 /* JDropDownAlert.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB5FAFB81CC8F48C0042D742 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB5FAF981CC8F48C0042D742 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB5FAF9F1CC8F48C0042D742;
+			remoteInfo = JDropDownAlert;
+		};
+		DB5FAFC31CC8F48C0042D742 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB5FAF981CC8F48C0042D742 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB5FAF9F1CC8F48C0042D742;
+			remoteInfo = JDropDownAlert;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DB5FAFA01CC8F48C0042D742 /* JDropDownAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JDropDownAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB5FAFA31CC8F48C0042D742 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DB5FAFA51CC8F48C0042D742 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DB5FAFA81CC8F48C0042D742 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DB5FAFAB1CC8F48C0042D742 /* JDropDownAlert.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JDropDownAlert.xcdatamodel; sourceTree = "<group>"; };
+		DB5FAFAD1CC8F48C0042D742 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB5FAFB01CC8F48C0042D742 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DB5FAFB21CC8F48C0042D742 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB5FAFB71CC8F48C0042D742 /* JDropDownAlertTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JDropDownAlertTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB5FAFBB1CC8F48C0042D742 /* JDropDownAlertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDropDownAlertTests.swift; sourceTree = "<group>"; };
+		DB5FAFBD1CC8F48C0042D742 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB5FAFC21CC8F48C0042D742 /* JDropDownAlertUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JDropDownAlertUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB5FAFC61CC8F48C0042D742 /* JDropDownAlertUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDropDownAlertUITests.swift; sourceTree = "<group>"; };
+		DB5FAFC81CC8F48C0042D742 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB5FAFD51CC8F4AC0042D742 /* JDropDownAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDropDownAlert.swift; sourceTree = "<group>"; };
+		DB5FAFD71CC8F4DE0042D742 /* JDropDownAlert-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JDropDownAlert-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB5FAF9D1CC8F48C0042D742 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB5FAFB41CC8F48C0042D742 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB5FAFBF1CC8F48C0042D742 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB5FAF971CC8F48C0042D742 = {
+			isa = PBXGroup;
+			children = (
+				DB5FAFA21CC8F48C0042D742 /* JDropDownAlert */,
+				DB5FAFBA1CC8F48C0042D742 /* JDropDownAlertTests */,
+				DB5FAFC51CC8F48C0042D742 /* JDropDownAlertUITests */,
+				DB5FAFA11CC8F48C0042D742 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB5FAFA11CC8F48C0042D742 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB5FAFA01CC8F48C0042D742 /* JDropDownAlert.app */,
+				DB5FAFB71CC8F48C0042D742 /* JDropDownAlertTests.xctest */,
+				DB5FAFC21CC8F48C0042D742 /* JDropDownAlertUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB5FAFA21CC8F48C0042D742 /* JDropDownAlert */ = {
+			isa = PBXGroup;
+			children = (
+				DB5FAFA31CC8F48C0042D742 /* AppDelegate.swift */,
+				DB5FAFA51CC8F48C0042D742 /* ViewController.swift */,
+				DB5FAFD51CC8F4AC0042D742 /* JDropDownAlert.swift */,
+				DB5FAFA71CC8F48C0042D742 /* Main.storyboard */,
+				DB5FAFAD1CC8F48C0042D742 /* Assets.xcassets */,
+				DB5FAFAF1CC8F48C0042D742 /* LaunchScreen.storyboard */,
+				DB5FAFB21CC8F48C0042D742 /* Info.plist */,
+				DB5FAFAA1CC8F48C0042D742 /* JDropDownAlert.xcdatamodeld */,
+				DB5FAFD71CC8F4DE0042D742 /* JDropDownAlert-Bridging-Header.h */,
+			);
+			path = JDropDownAlert;
+			sourceTree = "<group>";
+		};
+		DB5FAFBA1CC8F48C0042D742 /* JDropDownAlertTests */ = {
+			isa = PBXGroup;
+			children = (
+				DB5FAFBB1CC8F48C0042D742 /* JDropDownAlertTests.swift */,
+				DB5FAFBD1CC8F48C0042D742 /* Info.plist */,
+			);
+			path = JDropDownAlertTests;
+			sourceTree = "<group>";
+		};
+		DB5FAFC51CC8F48C0042D742 /* JDropDownAlertUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DB5FAFC61CC8F48C0042D742 /* JDropDownAlertUITests.swift */,
+				DB5FAFC81CC8F48C0042D742 /* Info.plist */,
+			);
+			path = JDropDownAlertUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB5FAF9F1CC8F48C0042D742 /* JDropDownAlert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB5FAFCB1CC8F48C0042D742 /* Build configuration list for PBXNativeTarget "JDropDownAlert" */;
+			buildPhases = (
+				DB5FAF9C1CC8F48C0042D742 /* Sources */,
+				DB5FAF9D1CC8F48C0042D742 /* Frameworks */,
+				DB5FAF9E1CC8F48C0042D742 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JDropDownAlert;
+			productName = JDropDownAlert;
+			productReference = DB5FAFA01CC8F48C0042D742 /* JDropDownAlert.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DB5FAFB61CC8F48C0042D742 /* JDropDownAlertTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB5FAFCE1CC8F48C0042D742 /* Build configuration list for PBXNativeTarget "JDropDownAlertTests" */;
+			buildPhases = (
+				DB5FAFB31CC8F48C0042D742 /* Sources */,
+				DB5FAFB41CC8F48C0042D742 /* Frameworks */,
+				DB5FAFB51CC8F48C0042D742 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB5FAFB91CC8F48C0042D742 /* PBXTargetDependency */,
+			);
+			name = JDropDownAlertTests;
+			productName = JDropDownAlertTests;
+			productReference = DB5FAFB71CC8F48C0042D742 /* JDropDownAlertTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DB5FAFC11CC8F48C0042D742 /* JDropDownAlertUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB5FAFD11CC8F48C0042D742 /* Build configuration list for PBXNativeTarget "JDropDownAlertUITests" */;
+			buildPhases = (
+				DB5FAFBE1CC8F48C0042D742 /* Sources */,
+				DB5FAFBF1CC8F48C0042D742 /* Frameworks */,
+				DB5FAFC01CC8F48C0042D742 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB5FAFC41CC8F48C0042D742 /* PBXTargetDependency */,
+			);
+			name = JDropDownAlertUITests;
+			productName = JDropDownAlertUITests;
+			productReference = DB5FAFC21CC8F48C0042D742 /* JDropDownAlertUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB5FAF981CC8F48C0042D742 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Trillione;
+				TargetAttributes = {
+					DB5FAF9F1CC8F48C0042D742 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					DB5FAFB61CC8F48C0042D742 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = DB5FAF9F1CC8F48C0042D742;
+					};
+					DB5FAFC11CC8F48C0042D742 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = DB5FAF9F1CC8F48C0042D742;
+					};
+				};
+			};
+			buildConfigurationList = DB5FAF9B1CC8F48C0042D742 /* Build configuration list for PBXProject "JDropDownAlert" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DB5FAF971CC8F48C0042D742;
+			productRefGroup = DB5FAFA11CC8F48C0042D742 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB5FAF9F1CC8F48C0042D742 /* JDropDownAlert */,
+				DB5FAFB61CC8F48C0042D742 /* JDropDownAlertTests */,
+				DB5FAFC11CC8F48C0042D742 /* JDropDownAlertUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB5FAF9E1CC8F48C0042D742 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB5FAFB11CC8F48C0042D742 /* LaunchScreen.storyboard in Resources */,
+				DB5FAFAE1CC8F48C0042D742 /* Assets.xcassets in Resources */,
+				DB5FAFA91CC8F48C0042D742 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB5FAFB51CC8F48C0042D742 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB5FAFC01CC8F48C0042D742 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB5FAF9C1CC8F48C0042D742 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB5FAFA61CC8F48C0042D742 /* ViewController.swift in Sources */,
+				DB5FAFAC1CC8F48C0042D742 /* JDropDownAlert.xcdatamodeld in Sources */,
+				DB5FAFD61CC8F4AC0042D742 /* JDropDownAlert.swift in Sources */,
+				DB5FAFA41CC8F48C0042D742 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB5FAFB31CC8F48C0042D742 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB5FAFBC1CC8F48C0042D742 /* JDropDownAlertTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB5FAFBE1CC8F48C0042D742 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB5FAFC71CC8F48C0042D742 /* JDropDownAlertUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB5FAFB91CC8F48C0042D742 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB5FAF9F1CC8F48C0042D742 /* JDropDownAlert */;
+			targetProxy = DB5FAFB81CC8F48C0042D742 /* PBXContainerItemProxy */;
+		};
+		DB5FAFC41CC8F48C0042D742 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB5FAF9F1CC8F48C0042D742 /* JDropDownAlert */;
+			targetProxy = DB5FAFC31CC8F48C0042D742 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DB5FAFA71CC8F48C0042D742 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB5FAFA81CC8F48C0042D742 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DB5FAFAF1CC8F48C0042D742 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB5FAFB01CC8F48C0042D742 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DB5FAFC91CC8F48C0042D742 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB5FAFCA1CC8F48C0042D742 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DB5FAFCC1CC8F48C0042D742 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = JDropDownAlert/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.trillione.JDropDownAlert;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JDropDownAlert/JDropDownAlert-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DB5FAFCD1CC8F48C0042D742 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = JDropDownAlert/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.trillione.JDropDownAlert;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JDropDownAlert/JDropDownAlert-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		DB5FAFCF1CC8F48C0042D742 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JDropDownAlertTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.trillione.JDropDownAlertTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JDropDownAlert.app/JDropDownAlert";
+			};
+			name = Debug;
+		};
+		DB5FAFD01CC8F48C0042D742 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JDropDownAlertTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.trillione.JDropDownAlertTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JDropDownAlert.app/JDropDownAlert";
+			};
+			name = Release;
+		};
+		DB5FAFD21CC8F48C0042D742 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JDropDownAlertUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.trillione.JDropDownAlertUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = JDropDownAlert;
+			};
+			name = Debug;
+		};
+		DB5FAFD31CC8F48C0042D742 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JDropDownAlertUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.trillione.JDropDownAlertUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = JDropDownAlert;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB5FAF9B1CC8F48C0042D742 /* Build configuration list for PBXProject "JDropDownAlert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB5FAFC91CC8F48C0042D742 /* Debug */,
+				DB5FAFCA1CC8F48C0042D742 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB5FAFCB1CC8F48C0042D742 /* Build configuration list for PBXNativeTarget "JDropDownAlert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB5FAFCC1CC8F48C0042D742 /* Debug */,
+				DB5FAFCD1CC8F48C0042D742 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DB5FAFCE1CC8F48C0042D742 /* Build configuration list for PBXNativeTarget "JDropDownAlertTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB5FAFCF1CC8F48C0042D742 /* Debug */,
+				DB5FAFD01CC8F48C0042D742 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DB5FAFD11CC8F48C0042D742 /* Build configuration list for PBXNativeTarget "JDropDownAlertUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB5FAFD21CC8F48C0042D742 /* Debug */,
+				DB5FAFD31CC8F48C0042D742 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DB5FAFAA1CC8F48C0042D742 /* JDropDownAlert.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DB5FAFAB1CC8F48C0042D742 /* JDropDownAlert.xcdatamodel */,
+			);
+			currentVersion = DB5FAFAB1CC8F48C0042D742 /* JDropDownAlert.xcdatamodel */;
+			path = JDropDownAlert.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DB5FAF981CC8F48C0042D742 /* Project object */;
+}
