@@ -12,17 +12,19 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    JDropDownAlert.setDropDownAlertTextFont("AppleSDGothicNeo-Bold", titleFontSize: 15, messageFontName: "AppleSDGothicNeo-Medium", messageFontSize: 10)
+    
   }
   
   
   @IBAction func alertAction(sender: AnyObject) {
+    let alert = JDropDownAlert()
     
-    JDropDownAlert.alertWithTitle("Hey, Beautiful!",
-                                  message: "Could you pass me a bottle of water?",
-                                  delay: nil,
-                                  duration: nil,
-                                  height: 70)
+    alert.alertWithTitle("Hey, Beautiful!",
+                                  message: "Could you pass me a bottle of water?")
+    
+    alert.didTapBlock = {
+      print("View Did Tapped")
+    }
   }
   
   override func didReceiveMemoryWarning() {
