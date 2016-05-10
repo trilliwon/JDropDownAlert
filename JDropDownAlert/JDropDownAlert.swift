@@ -15,7 +15,6 @@ public class JDropDownAlert: UIButton {
   var height: CGFloat = 70
   var duration = 0.3
   var delay: Double = 2.0
-  var stayDuration = 1.0
   
   var title = UILabel()
   var message = UILabel()
@@ -42,7 +41,7 @@ public class JDropDownAlert: UIButton {
     let titleFrame = CGRectMake(10, statusBarHeight, frame.size.width-10, 20)
     title = UILabel(frame: titleFrame)
     title.textAlignment = .Center
-    message.numberOfLines = 10
+    title.numberOfLines = 10
     title.textColor = UIColor.whiteColor()
     title.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 15)!
     addSubview(title)
