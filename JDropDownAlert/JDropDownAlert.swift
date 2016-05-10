@@ -10,6 +10,11 @@ import UIKit
 
 public class JDropDownAlert: UIButton {
   
+  public enum JDropDownType: Int {
+    case Top
+    case Bottom
+  }
+  
   // default values
   // You can change this values to customize
   let height: CGFloat = 70
@@ -20,19 +25,27 @@ public class JDropDownAlert: UIButton {
   var message = UILabel()
   
   private let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.size.height
-  private let width = UIScreen.mainScreen().bounds.size.width
+  private let screenWidth = UIScreen.mainScreen().bounds.size.width
+  private let screenHeight = UIScreen.mainScreen().bounds.size.height
   
   public var didTapBlock: (() -> ())?
+  
+  public var alertType = JDropDownType.Top
   
   public required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
   
   init() {
-    super.init(frame: CGRectMake(0.0, -self.height, width, self.height))
-    self.frame = CGRectMake(0.0, -self.height, width, self.height)
+    super.init(frame: CGRectMake(0.0, -self.height, screenWidth, self.height))
+    self.frame = CGRectMake(0.0, -self.height, screenWidth, self.height)
 
     defaultSetting()
+  }
+  
+  convenience init(alertType: JDropDownType) {
+    self.init()
+    self.alertType = alertType
   }
   
   func defaultSetting() {
@@ -66,8 +79,14 @@ public class JDropDownAlert: UIButton {
   }
   
   func hide(alertView: UIButton) {
-    UIView.animateWithDuration(duration) {
-      alertView.frame.origin.y = -self.height
+    if self.alertType == JDropDownType.Top {
+      UIView.animateWithDuration(duration) {
+        alertView.frame.origin.y = -self.height
+      }
+    } else {
+      UIView.animateWithDuration(duration) {
+        alertView.frame.origin.y = self.screenHeight
+      }
     }
     performSelector(#selector(remove), withObject: alertView, afterDelay: delay)
   }
@@ -81,10 +100,16 @@ public class JDropDownAlert: UIButton {
     addWindowSubview(self)
     configureProperties(title, message: message, textColor: textColor, backgroundColor: backgroundColor)
     
-    UIView.animateWithDuration(self.duration) {
-      self.frame.origin.y = 0
+    if self.alertType == JDropDownType.Top {
+      UIView.animateWithDuration(self.duration) {
+        self.frame.origin.y = 0
+      }
+    } else {
+      self.frame = CGRectMake(0.0, screenHeight+height, screenWidth, height)
+      UIView.animateWithDuration(self.duration) {
+        self.frame.origin.y = self.screenHeight-self.height
+      }
     }
-    
     performSelector(#selector(hide), withObject: self, afterDelay: self.delay)
   }
   
