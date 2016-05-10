@@ -12,9 +12,9 @@ public class JDropDownAlert: UIButton {
   
   // default values
   // You can change this values to customize
-  var height: CGFloat = 70
-  var duration = 0.3
-  var delay: Double = 2.0
+  let height: CGFloat = 70
+  let duration = 0.3
+  let delay: Double = 2.0
   
   var title = UILabel()
   var message = UILabel()
@@ -79,7 +79,7 @@ public class JDropDownAlert: UIButton {
   // MARK: - Hub method
   func show(title: String, message: String?, textColor: UIColor?, backgroundColor: UIColor?) {
     addWindowSubview(self)
-    configureProperties(title, message: message, textColor: textColor, backgroundColor: backgroundColor, delay: delay, duration: duration, height: height)
+    configureProperties(title, message: message, textColor: textColor, backgroundColor: backgroundColor)
     
     UIView.animateWithDuration(self.duration) {
       self.frame.origin.y = 0
@@ -100,14 +100,8 @@ public class JDropDownAlert: UIButton {
     }
   }
   
-  func configureProperties(title: String, message: String?, textColor: UIColor?, backgroundColor: UIColor?, delay:Double?, duration: Double?, height: CGFloat?) {
-    
+  func configureProperties(title: String, message: String?, textColor: UIColor?, backgroundColor: UIColor?) {
     self.title.text = title
-    
-    if let height = height {
-      self.height = height
-      self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.width, height)
-    }
     
     if let message = message {
       self.message.text = message
@@ -121,14 +115,6 @@ public class JDropDownAlert: UIButton {
       self.message.textColor = textColor
     }
     
-    if let delay = delay {
-      self.delay = delay
-    }
-    
-    if let duration = duration {
-      self.duration = duration
-    }
-    
     if let backgroundColor = backgroundColor {
       self.backgroundColor = backgroundColor
     }
@@ -136,8 +122,7 @@ public class JDropDownAlert: UIButton {
   
   // MARK: used funcs, intefaces
   // title
-  public func alertWithTitle(title: String,
-                             height: CGFloat?) {
+  public func alertWithTitle(title: String) {
     
     show(title,
          message: nil,
@@ -196,6 +181,18 @@ public class JDropDownAlert: UIButton {
     show(title,
          message: message,
          textColor: nil,
+         backgroundColor: backgroundColor)
+  }
+  
+  
+  public func alertWithTitle(title: String,
+                             message: String,
+                             textColor: UIColor,
+                             backgroundColor: UIColor) {
+    
+    show(title,
+         message: message,
+         textColor: textColor,
          backgroundColor: backgroundColor)
   }
 }
