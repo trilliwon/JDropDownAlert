@@ -14,7 +14,9 @@ alert.alertWithTitle("Hey, Beautiful!",
                          textColor: UIColor.whiteColor())
 ```
 
-![alt tag](https://cloud.githubusercontent.com/assets/14218787/14765788/a2535a14-0a2c-11e6-8b4f-3a531432bc3a.gif) ![alt tag](https://cloud.githubusercontent.com/assets/14218787/15170961/b18f0c38-1785-11e6-90f7-69b74f02dfa2.gif)
+![alt tag](https://cloud.githubusercontent.com/assets/14218787/14765788/a2535a14-0a2c-11e6-8b4f-3a531432bc3a.gif)
+--------
+![alt tag](https://cloud.githubusercontent.com/assets/14218787/15170961/b18f0c38-1785-11e6-90f7-69b74f02dfa2.gif)
 
 ## Usage
 
