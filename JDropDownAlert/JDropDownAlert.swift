@@ -36,22 +36,19 @@ public class JDropDownAlert: UIButton {
     fatalError("init(coder:) has not been implemented")
   }
   
-  init() {
+  init(typeWithDefault: AlertPosition = .Top) {
     let frame = CGRectMake(0.0, -self.height, screenWidth, self.height)
     super.init(frame: frame)
     self.frame = frame
+    self.position = typeWithDefault
     defaultSetting()
-  }
-  
-  convenience init(type: AlertPosition) {
-    self.init()
-    self.position = type
   }
   
   private func defaultSetting() {
     
     // Title
-    let titleFrame = CGRectMake(10, statusBarHeight, frame.size.width - 10, 20)
+    let titleFrame = (self.position == .Top) ?
+      CGRectMake(10, statusBarHeight, frame.size.width - 10, 20) : CGRectMake(10, 15, frame.size.width - 10, 20)
     title = UILabel(frame: titleFrame)
     title.textAlignment = .Center
     title.numberOfLines = 10
@@ -60,7 +57,8 @@ public class JDropDownAlert: UIButton {
     addSubview(title)
     
     // Message
-    let messageFrame = CGRectMake(10, statusBarHeight + titleFrame.height + 5, frame.size.width - 10, 20)
+    let messageFrame = (self.position == .Top) ?
+      CGRectMake(10, statusBarHeight + titleFrame.height + 5, frame.size.width - 10, 20) : CGRectMake(10, titleFrame.size.height + titleFrame.height, frame.size.width - 10, 20)
     message = UILabel(frame: messageFrame)
     message.textAlignment = .Center
     message.lineBreakMode = .ByWordWrapping
