@@ -10,13 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
   
-  
   override func viewDidLoad() {
     super.viewDidLoad()
   }
   
   @IBAction func alertAction(sender: AnyObject) {
-    let alert = JDropDownAlert(type: .Top)
+    let alert = JDropDownAlert()
     alert.alertWithTitle("Hey, Beautiful!", message: "Could you pass me a bottle of water?")
     
     alert.didTapBlock = {
@@ -25,7 +24,7 @@ class ViewController: UIViewController {
   }
   
   @IBAction func bottomAlertAction(sender: AnyObject) {
-    let alert = JDropDownAlert(type: .Bottom)
+    let alert = JDropDownAlert(typeWithDefault: .Bottom)
     alert.alertWithTitle("Hey, Beautiful!", message: "Could you pass me a bottle of water?")
     
     alert.didTapBlock = {
