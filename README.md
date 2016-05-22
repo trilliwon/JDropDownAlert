@@ -6,7 +6,7 @@
 
 ```Swift
 // JDropDownAlert Class initialization
-let alert = JDropDownAlert(type: .Top)
+let alert = JDropDownAlert(typeWithDefault: .Top)
 
 // call alertWithTitle function
 alert.alertWithTitle("Hey, Beautiful!",
