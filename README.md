@@ -1,5 +1,14 @@
 # JDropDownAlert
 
+[![Language](http://img.shields.io/badge/language-swift-brightgreen.svg?style=flat
+)](https://developer.apple.com/swift)
+[![Version](https://img.shields.io/cocoapods/v/trillione.svg?style=flat)](http://cocoadocs.org/docsets/JDropDownAlert)
+[![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat
+)](http://mit-license.org)
+[![Issues](https://img.shields.io/github/issues/trillione/JDropDownAlert.svg?style=flat
+)](https://github.com/trillione/JDropDownAlert/issues?state=open)
+
+
 #####Inspiration from RKDropDownAlert
 
 ## Demo
