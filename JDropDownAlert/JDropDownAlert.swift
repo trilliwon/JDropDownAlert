@@ -14,6 +14,10 @@ public class JDropDownAlert: UIButton {
     case Top, Bottom
   }
   
+  enum AnimationDirection {
+    case ToLeft, ToRight, Normal
+  }
+  
   // default values
   // You can change this values to customize
   private let height: CGFloat = 70
@@ -24,6 +28,7 @@ public class JDropDownAlert: UIButton {
   private var message = UILabel()
   
   private var position = AlertPosition.Top
+  private var direction = AnimationDirection.Normal
   
   private let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.size.height
   private let screenWidth = UIScreen.mainScreen().bounds.size.width
@@ -36,13 +41,30 @@ public class JDropDownAlert: UIButton {
     fatalError("init(coder:) has not been implemented")
   }
   
-  init(position: AlertPosition = .Top) {
-    let frame = CGRectMake(0.0, -self.height, screenWidth, self.height)
-    super.init(frame: frame)
-    self.frame = frame
+  init(position: AlertPosition = .Top, direction: AnimationDirection = .Normal) {
+    super.init(frame: CGRectZero)
+    
+    self.frame = getFrameByDirection(direction)
+    
+    self.direction = direction
     self.position = position
     defaultSetting()
   }
+  
+  func getFrameByDirection(direction: AnimationDirection) -> CGRect {
+    var frame: CGRect!
+    
+    switch (direction) {
+    case .ToRight:
+      frame = CGRectMake(-self.screenWidth, 0.0, screenWidth, self.height)
+    case .ToLeft:
+      frame = CGRectMake(self.screenWidth, 0.0, screenWidth, self.height)
+    case .Normal:
+      frame = CGRectMake(0.0, -self.height, screenWidth, self.height)
+    }
+    return frame
+  }
+  
   
   private func defaultSetting() {
     
@@ -76,21 +98,9 @@ public class JDropDownAlert: UIButton {
     hide(self)
   }
   
-  @objc private func hide(alertView: UIButton) {
-    
-    UIView.animateWithDuration(duration) {
-      
-      (self.position == .Top) ? (alertView.frame.origin.y = -self.height) : (alertView.frame.origin.y = self.screenHeight)
-    }
-    performSelector(#selector(remove), withObject: alertView, afterDelay: delay)
-  }
-  
-  @objc private func remove(alertView: UIButton) {
-    alertView.removeFromSuperview()
-  }
-  
   // MARK: - Hub method
   @objc private func show(title: String, message: String?, textColor: UIColor?, backgroundColor: UIColor?) {
+    
     addWindowSubview(self)
     configureProperties(title, message: message, textColor: textColor, backgroundColor: backgroundColor)
     
@@ -100,7 +110,13 @@ public class JDropDownAlert: UIButton {
     
     UIView.animateWithDuration(self.duration) {
       
-      (self.position == .Top) ? (self.frame.origin.y = 0) : (self.frame.origin.y = self.screenHeight-self.height)
+      if self.direction == .ToRight {
+        self.frame.origin.x = 0
+      } else if self.direction == .ToLeft {
+        self.frame.origin.x = 0
+      } else {
+        (self.position == .Top) ? (self.frame.origin.y = 0) : (self.frame.origin.y = self.screenHeight-self.height)
+      }
     }
     performSelector(#selector(hide), withObject: self, afterDelay: self.delay)
   }
@@ -116,6 +132,27 @@ public class JDropDownAlert: UIButton {
       }
     }
   }
+  
+  
+  @objc private func hide(alertView: UIButton) {
+    
+    UIView.animateWithDuration(duration) {
+      
+      if self.direction == .ToRight {
+        self.frame.origin.x = -self.screenWidth
+      } else if self.direction == .ToLeft {
+        self.frame.origin.x = self.screenWidth
+      } else {
+        (self.position == .Top) ? (alertView.frame.origin.y = -self.height) : (alertView.frame.origin.y = self.screenHeight)
+      }
+    }
+    performSelector(#selector(remove), withObject: alertView, afterDelay: delay)
+  }
+  
+  @objc private func remove(alertView: UIButton) {
+    alertView.removeFromSuperview()
+  }
+  
   
   @objc private func configureProperties(title: String, message: String?, textColor: UIColor?, backgroundColor: UIColor?) {
     self.title.text = title
