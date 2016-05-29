@@ -36,11 +36,11 @@ public class JDropDownAlert: UIButton {
     fatalError("init(coder:) has not been implemented")
   }
   
-  init(typeWithDefault: AlertPosition = .Top) {
+  init(position: AlertPosition = .Top) {
     let frame = CGRectMake(0.0, -self.height, screenWidth, self.height)
     super.init(frame: frame)
     self.frame = frame
-    self.position = typeWithDefault
+    self.position = position
     defaultSetting()
   }
   
