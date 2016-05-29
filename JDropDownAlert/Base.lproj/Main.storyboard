@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -17,10 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYw-ne-fQT">
-                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IK-P3-Dyy">
+                                <rect key="frame" x="243" y="315" width="114" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="ALERT"/>
+                                <state key="normal" title="BOTTOM ALERT"/>
+                                <connections>
+                                    <action selector="bottomAlertAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VFs-sS-Ob5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYw-ne-fQT">
+                                <rect key="frame" x="260" y="255" width="80" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="TOP ALERT"/>
                                 <connections>
                                     <action selector="alertAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bCB-Iv-mgw"/>
                                 </connections>
@@ -29,7 +37,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="uYw-ne-fQT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1zL-wQ-fvZ"/>
-                            <constraint firstItem="uYw-ne-fQT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fq5-aQ-fmy"/>
+                            <constraint firstItem="1IK-P3-Dyy" firstAttribute="top" secondItem="uYw-ne-fQT" secondAttribute="bottom" constant="30" id="bNV-V9-7C7"/>
+                            <constraint firstItem="uYw-ne-fQT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-30" id="fq5-aQ-fmy"/>
+                            <constraint firstItem="1IK-P3-Dyy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oto-uH-hMl"/>
                         </constraints>
                     </view>
                 </viewController>
