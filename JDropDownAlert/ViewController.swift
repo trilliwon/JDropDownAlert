@@ -24,14 +24,14 @@ class ViewController: UIViewController {
   }
   
   @IBAction func bottomAlertAction(sender: AnyObject) {
-    let alert = JDropDownAlert(position: .Bottom)
+    let alert = JDropDownAlert(position: .Bottom, direction: .ToLeft)
     alert.alertWithTitle("Hey, Beautiful!", message: "Could you pass me a bottle of water?")
     
     alert.didTapBlock = {
       print("View Did Tapped")
     }
   }
-  
+
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }
