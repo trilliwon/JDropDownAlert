@@ -11,7 +11,11 @@ import UIKit
 public class JDropDownAlert: UIButton {
   
   enum AlertPosition {
-    case Top, Bottom, StatusBar
+    case Top, Bottom
+  }
+  
+  enum AnimationDirection {
+    case ToLeft, ToRight, Normal
   }
   
   // default values
@@ -24,6 +28,7 @@ public class JDropDownAlert: UIButton {
   private var message = UILabel()
   
   private var position = AlertPosition.Top
+  private var direction = AnimationDirection.Normal
   
   private let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.size.height
   private let screenWidth = UIScreen.mainScreen().bounds.size.width
@@ -36,17 +41,36 @@ public class JDropDownAlert: UIButton {
     fatalError("init(coder:) has not been implemented")
   }
   
-  init(position: AlertPosition = .Top) {
+  init(position: AlertPosition = .Top, direction: AnimationDirection = .Normal) {
     super.init(frame: CGRectZero)
-    self.frame = getNotificationViewWithAlertPosition(position)
+    
+    self.frame = getFrameByDirection(direction)
+    
+    self.direction = direction
     self.position = position
     defaultSetting()
   }
   
+  func getFrameByDirection(direction: AnimationDirection) -> CGRect {
+    var frame: CGRect!
+    
+    switch (direction) {
+    case .ToRight:
+      frame = CGRectMake(-self.screenWidth, 0.0, screenWidth, self.height)
+    case .ToLeft:
+      frame = CGRectMake(self.screenWidth, 0.0, screenWidth, self.height)
+    case .Normal:
+      frame = CGRectMake(0.0, -self.height, screenWidth, self.height)
+    }
+    return frame
+  }
+  
+  
   private func defaultSetting() {
     
     // Title
-    let titleFrame = getTitleFrameWithAlertPosition(position)
+    let titleFrame = (self.position == .Top) ?
+      CGRectMake(10, statusBarHeight, frame.size.width - 10, 20) : CGRectMake(10, 15, frame.size.width - 10, 20)
     title = UILabel(frame: titleFrame)
     title.textAlignment = .Center
     title.numberOfLines = 10
@@ -55,7 +79,8 @@ public class JDropDownAlert: UIButton {
     addSubview(title)
     
     // Message
-    let messageFrame = getMessageFrameWithAlertPosition(position, titleFrame: titleFrame)
+    let messageFrame = (self.position == .Top) ?
+      CGRectMake(10, statusBarHeight + titleFrame.height + 5, frame.size.width - 10, 20) : CGRectMake(10, titleFrame.size.height + titleFrame.height, frame.size.width - 10, 20)
     message = UILabel(frame: messageFrame)
     message.textAlignment = .Center
     message.lineBreakMode = .ByWordWrapping
@@ -68,68 +93,30 @@ public class JDropDownAlert: UIButton {
     self.addTarget(self, action: #selector(viewDidTap), forControlEvents: .TouchUpInside)
   }
   
-  // MARK: - dimensions method
-  private func getNotificationViewWithAlertPosition(alertPosition: AlertPosition) -> CGRect  {
-    switch alertPosition {
-    case .Top:
-      return CGRectMake(0.0, -self.height, screenWidth, self.height)
-    case . Bottom:
-      return CGRectMake(0.0, self.screenHeight + self.height, self.screenWidth, self.height)
-    default:
-      return CGRectMake(0.0, -self.height, screenWidth, statusBarHeight)
-    }
-  }
-  
-  private func getTitleFrameWithAlertPosition(alertPosition: AlertPosition) -> CGRect {
-    switch alertPosition {
-    case .Top:
-      return CGRectMake(10, statusBarHeight, frame.size.width - 10, 20)
-    case . Bottom:
-      return CGRectMake(10, 15, frame.size.width - 10, 20)
-    default:
-      //need change
-      return CGRectMake(10, 0, frame.size.width - 10, 20)
-    }
-  }
-  
-  private func getMessageFrameWithAlertPosition(alertPosition: AlertPosition, titleFrame: CGRect) -> CGRect {
-    switch alertPosition {
-    case .Top:
-      return CGRectMake(10, statusBarHeight + titleFrame.height + 5, frame.size.width - 10, 20)
-    case . Bottom:
-      return CGRectMake(10, titleFrame.size.height + titleFrame.height, frame.size.width - 10, 20)
-    default:
-      return CGRectZero
-    }
-  }
-  
-  // MARK: - tap method
   @objc private func viewDidTap() {
     didTapBlock?()
     hide(self)
   }
   
-  @objc private func hide(alertView: UIButton) {
-    
-    UIView.animateWithDuration(duration) {
-      
-      (self.position == .Bottom) ? (alertView.frame.origin.y = self.screenHeight) : (alertView.frame.origin.y = -self.height)
-    }
-    performSelector(#selector(remove), withObject: alertView, afterDelay: delay)
-  }
-  
-  @objc private func remove(alertView: UIButton) {
-    alertView.removeFromSuperview()
-  }
-  
   // MARK: - Hub method
   @objc private func show(title: String, message: String?, textColor: UIColor?, backgroundColor: UIColor?) {
+    
     addWindowSubview(self)
     configureProperties(title, message: message, textColor: textColor, backgroundColor: backgroundColor)
     
+    if self.position == .Bottom {
+      self.frame = CGRectMake(0.0, self.screenHeight + self.height, self.screenWidth, self.height)
+    }
+    
     UIView.animateWithDuration(self.duration) {
       
-      (self.position == .Bottom) ? (self.frame.origin.y = self.screenHeight-self.height) : (self.frame.origin.y = 0)
+      if self.direction == .ToRight {
+        self.frame.origin.x = 0
+      } else if self.direction == .ToLeft {
+        self.frame.origin.x = 0
+      } else {
+        (self.position == .Top) ? (self.frame.origin.y = 0) : (self.frame.origin.y = self.screenHeight-self.height)
+      }
     }
     performSelector(#selector(hide), withObject: self, afterDelay: self.delay)
   }
@@ -145,6 +132,27 @@ public class JDropDownAlert: UIButton {
       }
     }
   }
+  
+  
+  @objc private func hide(alertView: UIButton) {
+    
+    UIView.animateWithDuration(duration) {
+      
+      if self.direction == .ToRight {
+        self.frame.origin.x = -self.screenWidth
+      } else if self.direction == .ToLeft {
+        self.frame.origin.x = self.screenWidth
+      } else {
+        (self.position == .Top) ? (alertView.frame.origin.y = -self.height) : (alertView.frame.origin.y = self.screenHeight)
+      }
+    }
+    performSelector(#selector(remove), withObject: alertView, afterDelay: delay)
+  }
+  
+  @objc private func remove(alertView: UIButton) {
+    alertView.removeFromSuperview()
+  }
+  
   
   @objc private func configureProperties(title: String, message: String?, textColor: UIColor?, backgroundColor: UIColor?) {
     self.title.text = title

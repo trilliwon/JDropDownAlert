@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -33,20 +33,11 @@
                                     <action selector="alertAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bCB-Iv-mgw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3r-rz-Fgn">
-                                <rect key="frame" x="247" y="375" width="106" height="30"/>
-                                <state key="normal" title="STATUS ALERT"/>
-                                <connections>
-                                    <action selector="buttomAlertAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nho-CF-uFU"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="uYw-ne-fQT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1zL-wQ-fvZ"/>
-                            <constraint firstItem="p3r-rz-Fgn" firstAttribute="top" secondItem="1IK-P3-Dyy" secondAttribute="bottom" constant="30" id="AFl-T6-9KR"/>
                             <constraint firstItem="1IK-P3-Dyy" firstAttribute="top" secondItem="uYw-ne-fQT" secondAttribute="bottom" constant="30" id="bNV-V9-7C7"/>
-                            <constraint firstItem="p3r-rz-Fgn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bPy-fx-3pp"/>
                             <constraint firstItem="uYw-ne-fQT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-30" id="fq5-aQ-fmy"/>
                             <constraint firstItem="1IK-P3-Dyy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oto-uH-hMl"/>
                         </constraints>
@@ -54,7 +45,6 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="373" y="362"/>
         </scene>
     </scenes>
 </document>

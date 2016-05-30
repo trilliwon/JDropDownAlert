@@ -15,7 +15,7 @@ class ViewController: UIViewController {
   }
   
   @IBAction func alertAction(sender: AnyObject) {
-    let alert = JDropDownAlert()
+    let alert = JDropDownAlert(direction: .ToRight)
     alert.alertWithTitle("Hey, Beautiful!", message: "Could you pass me a bottle of water?")
     
     alert.didTapBlock = {
@@ -25,15 +25,6 @@ class ViewController: UIViewController {
   
   @IBAction func bottomAlertAction(sender: AnyObject) {
     let alert = JDropDownAlert(position: .Bottom)
-    alert.alertWithTitle("Hey, Beautiful!", message: "Could you pass me a bottle of water?")
-    
-    alert.didTapBlock = {
-      print("View Did Tapped")
-    }
-  }
-  
-  @IBAction func buttomAlertAction(sender: AnyObject) {
-    let alert = JDropDownAlert(position: .StatusBar)
     alert.alertWithTitle("Hey, Beautiful!", message: "Could you pass me a bottle of water?")
     
     alert.didTapBlock = {
