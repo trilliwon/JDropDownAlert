@@ -116,15 +116,17 @@ public class JDropDownAlert: UIButton {
   @objc private func show(title: String, message: String?, textColor: UIColor?, backgroundColor: UIColor?) {
     
     addWindowSubview(self)
+    
     configureProperties(title, message: message, textColor: textColor, backgroundColor: backgroundColor)
     
     UIView.animateWithDuration(self.duration) {
       
-      if self.direction == .ToRight {
+      switch self.direction {
+      case .ToRight:
         self.frame.origin.x = 0
-      } else if self.direction == .ToLeft {
+      case .ToLeft:
         self.frame.origin.x = 0
-      } else {
+      case .Normal:
         (self.position == .Top) ? (self.frame.origin.y = 0) : (self.frame.origin.y = self.screenHeight-self.height)
       }
     }
@@ -148,11 +150,12 @@ public class JDropDownAlert: UIButton {
     
     UIView.animateWithDuration(duration) {
       
-      if self.direction == .ToRight {
+      switch self.direction {
+      case .ToRight:
         self.frame.origin.x = -self.screenWidth
-      } else if self.direction == .ToLeft {
+      case .ToLeft:
         self.frame.origin.x = self.screenWidth
-      } else {
+      case .Normal:
         (self.position == .Top) ? (alertView.frame.origin.y = -self.height) : (alertView.frame.origin.y = self.screenHeight)
       }
     }
