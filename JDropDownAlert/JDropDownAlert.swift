@@ -11,7 +11,7 @@ import UIKit
 public class JDropDownAlert: UIButton {
   
   enum AlertPosition {
-    case Top, Bottom
+    case Top, Bottom, StatusBar
   }
   
   // default values
@@ -36,19 +36,17 @@ public class JDropDownAlert: UIButton {
     fatalError("init(coder:) has not been implemented")
   }
   
-  init(typeWithDefault: AlertPosition = .Top) {
-    let frame = CGRectMake(0.0, -self.height, screenWidth, self.height)
-    super.init(frame: frame)
-    self.frame = frame
-    self.position = typeWithDefault
+  init(position: AlertPosition = .Top) {
+    super.init(frame: CGRectZero)
+    self.frame = getNotificationViewWithAlertPosition(position)
+    self.position = position
     defaultSetting()
   }
   
   private func defaultSetting() {
     
     // Title
-    let titleFrame = (self.position == .Top) ?
-      CGRectMake(10, statusBarHeight, frame.size.width - 10, 20) : CGRectMake(10, 15, frame.size.width - 10, 20)
+    let titleFrame = getTitleFrameWithAlertPosition(position)
     title = UILabel(frame: titleFrame)
     title.textAlignment = .Center
     title.numberOfLines = 10
@@ -57,8 +55,7 @@ public class JDropDownAlert: UIButton {
     addSubview(title)
     
     // Message
-    let messageFrame = (self.position == .Top) ?
-      CGRectMake(10, statusBarHeight + titleFrame.height + 5, frame.size.width - 10, 20) : CGRectMake(10, titleFrame.size.height + titleFrame.height, frame.size.width - 10, 20)
+    let messageFrame = getMessageFrameWithAlertPosition(position, titleFrame: titleFrame)
     message = UILabel(frame: messageFrame)
     message.textAlignment = .Center
     message.lineBreakMode = .ByWordWrapping
@@ -71,6 +68,42 @@ public class JDropDownAlert: UIButton {
     self.addTarget(self, action: #selector(viewDidTap), forControlEvents: .TouchUpInside)
   }
   
+  // MARK: - dimensions method
+  private func getNotificationViewWithAlertPosition(alertPosition: AlertPosition) -> CGRect  {
+    switch alertPosition {
+    case .Top:
+      return CGRectMake(0.0, -self.height, screenWidth, self.height)
+    case . Bottom:
+      return CGRectMake(0.0, self.screenHeight + self.height, self.screenWidth, self.height)
+    default:
+      return CGRectMake(0.0, -self.height, screenWidth, statusBarHeight)
+    }
+  }
+  
+  private func getTitleFrameWithAlertPosition(alertPosition: AlertPosition) -> CGRect {
+    switch alertPosition {
+    case .Top:
+      return CGRectMake(10, statusBarHeight, frame.size.width - 10, 20)
+    case . Bottom:
+      return CGRectMake(10, 15, frame.size.width - 10, 20)
+    default:
+      //need change
+      return CGRectMake(10, 0, frame.size.width - 10, 20)
+    }
+  }
+  
+  private func getMessageFrameWithAlertPosition(alertPosition: AlertPosition, titleFrame: CGRect) -> CGRect {
+    switch alertPosition {
+    case .Top:
+      return CGRectMake(10, statusBarHeight + titleFrame.height + 5, frame.size.width - 10, 20)
+    case . Bottom:
+      return CGRectMake(10, titleFrame.size.height + titleFrame.height, frame.size.width - 10, 20)
+    default:
+      return CGRectZero
+    }
+  }
+  
+  // MARK: - tap method
   @objc private func viewDidTap() {
     didTapBlock?()
     hide(self)
@@ -80,7 +113,7 @@ public class JDropDownAlert: UIButton {
     
     UIView.animateWithDuration(duration) {
       
-      (self.position == .Top) ? (alertView.frame.origin.y = -self.height) : (alertView.frame.origin.y = self.screenHeight)
+      (self.position == .Bottom) ? (alertView.frame.origin.y = self.screenHeight) : (alertView.frame.origin.y = -self.height)
     }
     performSelector(#selector(remove), withObject: alertView, afterDelay: delay)
   }
@@ -94,13 +127,9 @@ public class JDropDownAlert: UIButton {
     addWindowSubview(self)
     configureProperties(title, message: message, textColor: textColor, backgroundColor: backgroundColor)
     
-    if self.position == .Bottom {
-      self.frame = CGRectMake(0.0, self.screenHeight + self.height, self.screenWidth, self.height)
-    }
-    
     UIView.animateWithDuration(self.duration) {
       
-      (self.position == .Top) ? (self.frame.origin.y = 0) : (self.frame.origin.y = self.screenHeight-self.height)
+      (self.position == .Bottom) ? (self.frame.origin.y = self.screenHeight-self.height) : (self.frame.origin.y = 0)
     }
     performSelector(#selector(hide), withObject: self, afterDelay: self.delay)
   }
