@@ -1,0 +1,16 @@
+PODS:
+  - JDropDownAlert (0.1.0)
+
+DEPENDENCIES:
+  - JDropDownAlert (from `../`)
+
+EXTERNAL SOURCES:
+  JDropDownAlert:
+    :path: ../
+
+SPEC CHECKSUMS:
+  JDropDownAlert: e39a441739f6935b4eb4984796fc4ac2a195f4ce
+
+PODFILE CHECKSUM: 1d57738625d666833f7dfcbfebaf77b4c2921d5c
+
+COCOAPODS: 1.0.1
