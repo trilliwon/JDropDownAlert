@@ -8,7 +8,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/JDropDownAlert.svg?style=flat)](http://cocoapods.org/pods/JDropDownAlert)
 [![Issues](https://img.shields.io/github/issues/trillione/JDropDownAlert.svg?style=flat)](https://github.com/trillione/JDropDownAlert/issues?state=open)
 ## JDropDownALert
-Simple DropDown Alert View inspired from 
+Simple DropDown Alert View For Any iOS Projects.
 
 ## Demo Gifs
 
