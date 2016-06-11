@@ -117,7 +117,7 @@ Add the JDropDownAlert.swift in to your project.
 
 ## Author
 
-- Steve Jo, trilliwon.io@gmail.com
+- Steve Jo, trilliwon@gmail.com
 - ppth0608, ppth0608@naver.com
 
 
