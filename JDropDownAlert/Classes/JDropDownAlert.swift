@@ -55,6 +55,17 @@ public class JDropDownAlert: UIButton {
     private let screenWidth = UIScreen.mainScreen().bounds.size.width
     private let screenHeight = UIScreen.mainScreen().bounds.size.height
     
+    public var titleFont:UIFont = UIFont.boldSystemFontOfSize(16) {
+        didSet{
+            topLabel.font = titleFont
+        }
+    }
+    public var messageFont:UIFont = UIFont.systemFontOfSize(14) {
+        didSet{
+            messageLabel.font = messageFont
+        }
+    }
+    
     public var didTapBlock: (() -> ())?
     
     public required init?(coder aDecoder: NSCoder) {
@@ -91,7 +102,7 @@ public class JDropDownAlert: UIButton {
         topLabel.textAlignment = .Center
         topLabel.numberOfLines = 10
         topLabel.textColor = UIColor.whiteColor()
-        topLabel.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 15)!
+        topLabel.font = self.titleFont
         addSubview(topLabel)
     }
     
@@ -108,7 +119,7 @@ public class JDropDownAlert: UIButton {
         messageLabel.lineBreakMode = .ByWordWrapping
         messageLabel.numberOfLines = 10
         messageLabel.textColor = UIColor.whiteColor()
-        messageLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 15)!
+        messageLabel.font = self.messageFont
         addSubview(messageLabel)
     }
     
