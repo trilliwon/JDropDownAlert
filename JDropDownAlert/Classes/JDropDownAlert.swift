@@ -42,7 +42,7 @@ public class JDropDownAlert: UIButton {
   // You can change this values to customize
   private let height: CGFloat = 70
   private let duration = 0.3
-  private let delay: Double = 2.0
+  private var delay: Double = 2.0
   
   private var titleFrame: CGRect!
   private var topLabel = UILabel()
