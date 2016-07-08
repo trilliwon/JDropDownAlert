@@ -60,7 +60,7 @@ public class JDropDownAlert: UIButton {
   public required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-  
+    
   public init(position: AlertPosition = .Top, direction: AnimationDirection = .Normal) {
     super.init(frame: CGRectZero)
     
@@ -163,6 +163,26 @@ public class JDropDownAlert: UIButton {
   
   
   // MARK: - Hub methods
+    @objc private func show(title: String, message: String?, textColor: UIColor?, backgroundColor: UIColor?, delay: Double) {
+        self.delay = delay
+        addWindowSubview(self)
+        configureProperties(title, message: message, textColor: textColor, backgroundColor: backgroundColor)
+        
+        UIView.animateWithDuration(self.duration) {
+            
+            switch self.direction {
+            case .ToRight:
+                self.frame.origin.x = 0
+            case .ToLeft:
+                self.frame.origin.x = 0
+            case .Normal:
+                self.position == .Top ? (self.frame.origin.y = 0) : (self.frame.origin.y = self.screenHeight-self.height)
+            }
+        }
+        performSelector(#selector(hide), withObject: self, afterDelay: self.delay)
+    }
+    
+    
   @objc private func show(title: String, message: String?, textColor: UIColor?, backgroundColor: UIColor?) {
     
     addWindowSubview(self)
