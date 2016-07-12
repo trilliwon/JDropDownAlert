@@ -115,11 +115,17 @@ pod "JDropDownAlert"
 Add the JDropDownAlert.swift in to your project.
 
 
-## Author
+## Credits
 
-- Steve Jo, trilliwon@gmail.com
-- ppth0608, ppth0608@naver.com
+Author
+- [trilliwon](https://github.com/trilliwon)
 
+Contributors
+- [ppth0608](https://github.com/ppth0608)
+- [Dudi00](https://github.com/Dudi00)
+
+
+##### Any contribution is welcome. Just submit a pull request.
 
 ## License
 
