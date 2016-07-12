@@ -26,8 +26,9 @@ class ViewController: UIViewController {
   
   @IBAction func topToLeftAlertAction() {
     let alert = JDropDownAlert(position: .Top, direction: .ToLeft)
+    alert.titleFont = UIFont(name: "Helvetica", size: 20)!
+    alert.messageFont = UIFont.italicSystemFontOfSize(12)
     alert.alertWith(titleString, message: messageString)
-    
     alert.didTapBlock = {
       print("Top View Did Tapped")
     }
