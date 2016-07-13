@@ -284,7 +284,7 @@ public class JDropDownAlert: UIButton {
 }
 
 
-extension UIColor {
+private extension UIColor {
     class func lightRed() -> UIColor {
         return UIColor(red: 255/255, green: 102/255, blue: 102/255, alpha: 0.9)
     }
