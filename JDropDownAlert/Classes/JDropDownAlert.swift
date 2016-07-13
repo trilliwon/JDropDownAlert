@@ -40,9 +40,9 @@ public class JDropDownAlert: UIButton {
     
     // default values
     // You can change this values to customize
-    private let height: CGFloat = 70
-    private let duration = 0.3
-    private var delay: Double = 2.0
+    public var height: CGFloat = 70
+    public var duration: NSTimeInterval = 0.3
+    public var delay: Double = 2.0
     
     private var titleFrame: CGRect!
     private var topLabel = UILabel()
@@ -179,7 +179,7 @@ public class JDropDownAlert: UIButton {
         addWindowSubview(self)
         configureProperties(title, message: message, textColor: textColor, backgroundColor: backgroundColor)
         
-        UIView.animateWithDuration(self.duration) {
+        UIView.animateWithDuration(duration) {
             
             switch self.direction {
             case .ToRight:
