@@ -3,7 +3,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JDropDownAlert'
-  s.version          = '0.3.1'
+  s.version          = '1.0.0'
   s.summary          = 'JDropDownAlert Is Simple Alert View For iOS Application.'
 
   s.description      = <<-DESC
