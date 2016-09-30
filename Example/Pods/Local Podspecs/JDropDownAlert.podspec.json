@@ -1,7 +1,10 @@
 {
   "name": "JDropDownAlert",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "summary": "JDropDownAlert Is Simple Alert View For iOS Application.",
+  "pod_target_xcconfig": {
+    "SWIFT_VERSION": "3.0"
+  },
   "description": "JDropDownAlert Is Simple Alert View For iOS Application. JDropDownAlert Has a TitleLabel and a MessageLabel. You Can Use Both Or Just TitleLabel. Supports Positions and Animation Directoins",
   "homepage": "https://github.com/trilliwon",
   "license": {
@@ -13,7 +16,7 @@
   },
   "source": {
     "git": "https://github.com/trilliwon/JDropDownAlert.git",
-    "tag": "0.1.0"
+    "tag": "1.0.1"
   },
   "social_media_url": "https://twitter.com/trilliwon",
   "platforms": {

@@ -10,11 +10,6 @@
 ## JDropDownALert
 Simple DropDown Alert View For Any iOS Projects.
 
-## Demo Gifs
-
-![top alert](https://cloud.githubusercontent.com/assets/14218787/15983592/e208537c-2fe7-11e6-85d5-55ce0abfc798.gif)
-![bottom alert](https://cloud.githubusercontent.com/assets/14218787/15983591/e1ec599c-2fe7-11e6-8956-54ae855d868a.gif)
-
 # Usage
 
 ### Top
@@ -131,3 +126,9 @@ Contributors
 ## License
 
 JDropDownAlert is available under the MIT license. See the LICENSE file for more info.
+
+
+## Demo Gifs
+
+![top alert](https://cloud.githubusercontent.com/assets/14218787/15983592/e208537c-2fe7-11e6-85d5-55ce0abfc798.gif)
+![bottom alert](https://cloud.githubusercontent.com/assets/14218787/15983591/e1ec599c-2fe7-11e6-8956-54ae855d868a.gif)

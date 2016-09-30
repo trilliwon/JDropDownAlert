@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  JDropDownAlert
 //
-//  Created by Trillione on 2016. 4. 21..
-//  Copyright © 2016년 Trillione. All rights reserved.
+//  Created by trilliwon on 2016. 4. 21..
+//  Copyright © 2016년 trilliwon. All rights reserved.
 //
 
 import UIKit
