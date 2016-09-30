@@ -25,9 +25,9 @@ class ViewController: UIViewController {
   }
   
   @IBAction func topToLeftAlertAction() {
-    let alert = JDropDownAlert(position: .Top, direction: .ToLeft)
+    let alert = JDropDownAlert(position: .top, direction: .toLeft)
     alert.titleFont = UIFont(name: "Helvetica", size: 20)!
-    alert.messageFont = UIFont.italicSystemFontOfSize(12)
+    alert.messageFont = UIFont.italicSystemFont(ofSize: 12)
     alert.alertWith(titleString, message: messageString)
     alert.didTapBlock = {
       print("Top View Did Tapped")
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
   }
   
   @IBAction func topToRightAlertAction() {
-    let alert = JDropDownAlert(position: .Top, direction: .ToRight)
+    let alert = JDropDownAlert(position: .top, direction: .toRight)
     alert.alertWith(titleString, message: messageString)
     
     alert.didTapBlock = {
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
   
   
   @IBAction func bottomAlertAction() {
-    let alert = JDropDownAlert(position: .Bottom)
+    let alert = JDropDownAlert(position: .bottom)
     alert.alertWith(titleString, message: messageString)
     
     alert.didTapBlock = {
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
   }
   
   @IBAction func bottomToLeftAlertAction() {
-    let alert = JDropDownAlert(position: .Bottom, direction: .ToLeft)
+    let alert = JDropDownAlert(position: .bottom, direction: .toLeft)
     alert.alertWith(titleString, message: messageString)
     
     alert.didTapBlock = {
@@ -63,7 +63,7 @@ class ViewController: UIViewController {
   }
   
   @IBAction func bottomToRightAlertAction() {
-    let alert = JDropDownAlert(position: .Bottom, direction: .ToRight)
+    let alert = JDropDownAlert(position: .bottom, direction: .toRight)
     alert.alertWith(titleString, message: messageString)
     
     alert.didTapBlock = {
