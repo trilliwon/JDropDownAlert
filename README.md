@@ -38,14 +38,14 @@ Simple DropDown Alert View For Any iOS Projects.
 ### Top With Directions
 
 ```Swift
-    let alert = JDropDownAlert(position: .Top, direction: .ToLeft)
+    let alert = JDropDownAlert(position: .top, direction: .toLeft)
     alert.alertWith(titleString, message: messageString)
     
     alert.didTapBlock = {
       print("Top View Did Tapped")
     }
     
-    let alert = JDropDownAlert(position: .Top, direction: .ToRight)
+    let alert = JDropDownAlert(position: .top, direction: .toRight)
     alert.alertWith(titleString, message: messageString)
     
     alert.didTapBlock = {
@@ -56,7 +56,7 @@ Simple DropDown Alert View For Any iOS Projects.
 ### Bottom
 
 ```Swift
-    let alert = JDropDownAlert(position: .Bottom)
+    let alert = JDropDownAlert(position: .bottom)
     alert.alertWith(titleString, message: messageString)
     
     alert.didTapBlock = {
@@ -66,14 +66,14 @@ Simple DropDown Alert View For Any iOS Projects.
 
 ### Bottom With Directions
 ```Swift
-    let alert = JDropDownAlert(position: .Bottom, direction: .ToLeft)
+    let alert = JDropDownAlert(position: .bottom, direction: .toLeft)
     alert.alertWith(titleString, message: messageString)
     
     alert.didTapBlock = {
       print("Bottom Alert View Did Tapped")
     }
     
-    let alert = JDropDownAlert(position: .Bottom, direction: .ToRight)
+    let alert = JDropDownAlert(position: .bottom, direction: .toRight)
     alert.alertWith(titleString, message: messageString)
     
     alert.didTapBlock = {
@@ -84,14 +84,14 @@ Simple DropDown Alert View For Any iOS Projects.
 ### Different Positions and Animation Directions
 ```Swift
   enum AlertPosition {
-    case Top
-    case Bottom
+    case top
+    case bottom
   }
   
   enum AnimationDirection {
-    case ToLeft
-    case ToRight
-    case Normal
+    case toLeft
+    case toRight
+    case normal
   }
 ```
 
@@ -102,6 +102,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Requirements
 
 iOS 8.0 + 
+swift 3.0 with version 1.0.0
 
 ## Installation
 
