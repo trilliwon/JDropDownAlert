@@ -26,54 +26,54 @@
 import UIKit
 
 public enum AlertPosition {
-    case Top
-    case Bottom
+    case top
+    case bottom
 }
 
 public enum AnimationDirection {
-    case ToLeft
-    case ToRight
-    case Normal
+    case toLeft
+    case toRight
+    case normal
 }
 
-public class JDropDownAlert: UIButton {
+open class JDropDownAlert: UIButton {
     
     // default values
     // You can change this values to customize
-    private let height: CGFloat = 70
-    private let duration = 0.3
-    private var delay: Double = 2.0
+    fileprivate let height: CGFloat = 70
+    fileprivate let duration = 0.3
+    fileprivate var delay: Double = 2.0
     
-    private var titleFrame: CGRect!
-    private var topLabel = UILabel()
-    private var messageLabel = UILabel()
+    fileprivate var titleFrame: CGRect!
+    fileprivate var topLabel = UILabel()
+    fileprivate var messageLabel = UILabel()
     
-    public var position = AlertPosition.Top
-    public var direction = AnimationDirection.Normal
+    open var position = AlertPosition.top
+    open var direction = AnimationDirection.normal
     
-    private let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.size.height
-    private let screenWidth = UIScreen.mainScreen().bounds.size.width
-    private let screenHeight = UIScreen.mainScreen().bounds.size.height
+    fileprivate let statusBarHeight = UIApplication.shared.statusBarFrame.size.height
+    fileprivate let screenWidth = UIScreen.main.bounds.size.width
+    fileprivate let screenHeight = UIScreen.main.bounds.size.height
     
-    public var titleFont:UIFont = UIFont.boldSystemFontOfSize(16) {
+    open var titleFont:UIFont = UIFont.boldSystemFont(ofSize: 16) {
         didSet{
             topLabel.font = titleFont
         }
     }
-    public var messageFont:UIFont = UIFont.systemFontOfSize(14) {
+    open var messageFont:UIFont = UIFont.systemFont(ofSize: 14) {
         didSet{
             messageLabel.font = messageFont
         }
     }
     
-    public var didTapBlock: (() -> ())?
+    open var didTapBlock: (() -> ())?
     
     public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public init(position: AlertPosition = .Top, direction: AnimationDirection = .Normal) {
-        super.init(frame: CGRectZero)
+    public init(position: AlertPosition = .top, direction: AnimationDirection = .normal) {
+        super.init(frame: CGRect.zero)
         
         self.frame = getFrameBy(position, direction: direction)
         self.direction = direction
@@ -83,90 +83,90 @@ public class JDropDownAlert: UIButton {
     
     
     
-    private func setDefaults() {
+    fileprivate func setDefaults() {
         setTitleDefaults()
         setMessageDefaults()
         self.backgroundColor = UIColor.lightRed()
-        self.addTarget(self, action: #selector(viewDidTap), forControlEvents: .TouchUpInside)
+        self.addTarget(self, action: #selector(viewDidTap), for: .touchUpInside)
     }
     
-    private func setTitleDefaults() {
+    fileprivate func setTitleDefaults() {
         
-        if self.position == .Top {
-            titleFrame = CGRectMake(10, statusBarHeight, frame.size.width - 10, 20)
+        if self.position == .top {
+            titleFrame = CGRect(x: 10, y: statusBarHeight, width: frame.size.width - 10, height: 20)
         }else {
-            titleFrame = CGRectMake(10, 15, frame.size.width - 10, 20)
+            titleFrame = CGRect(x: 10, y: 15, width: frame.size.width - 10, height: 20)
         }
         
         topLabel = UILabel(frame: titleFrame)
-        topLabel.textAlignment = .Center
+        topLabel.textAlignment = .center
         topLabel.numberOfLines = 10
-        topLabel.textColor = UIColor.whiteColor()
+        topLabel.textColor = UIColor.white
         topLabel.font = self.titleFont
         addSubview(topLabel)
     }
     
-    private func setMessageDefaults() {
+    fileprivate func setMessageDefaults() {
         let messageFrame:CGRect
         
-        if self.position == .Top {
-            messageFrame = CGRectMake(10, statusBarHeight + titleFrame.height + 5, frame.size.width - 10, 20)
+        if self.position == .top {
+            messageFrame = CGRect(x: 10, y: statusBarHeight + titleFrame.height + 5, width: frame.size.width - 10, height: 20)
         }else {
-            messageFrame = CGRectMake(10, titleFrame.size.height + titleFrame.height, frame.size.width - 10, 20)
+            messageFrame = CGRect(x: 10, y: titleFrame.size.height + titleFrame.height, width: frame.size.width - 10, height: 20)
         }
         messageLabel = UILabel(frame: messageFrame)
-        messageLabel.textAlignment = .Center
-        messageLabel.lineBreakMode = .ByWordWrapping
+        messageLabel.textAlignment = .center
+        messageLabel.lineBreakMode = .byWordWrapping
         messageLabel.numberOfLines = 10
-        messageLabel.textColor = UIColor.whiteColor()
+        messageLabel.textColor = UIColor.white
         messageLabel.font = self.messageFont
         addSubview(messageLabel)
     }
     
     
     
-    private func getFrameBy(position: AlertPosition, direction: AnimationDirection) -> CGRect {
+    fileprivate func getFrameBy(_ position: AlertPosition, direction: AnimationDirection) -> CGRect {
         let frame: CGRect
         
         switch position {
-        case .Top:
+        case .top:
             frame = getFrameOfTopPositionBy(direction)
-        case .Bottom:
+        case .bottom:
             frame = getFrameOfBottomPositionBy(direction)
         }
         
         return frame
     }
     
-    private func getFrameOfTopPositionBy(direction: AnimationDirection) -> CGRect {
+    fileprivate func getFrameOfTopPositionBy(_ direction: AnimationDirection) -> CGRect {
         let frame: CGRect
         switch direction {
-        case .ToRight:
-            frame = CGRectMake(-screenWidth, 0.0, screenWidth, height)
-        case .ToLeft:
-            frame = CGRectMake(screenWidth, 0.0, screenWidth, height)
-        case .Normal:
-            frame = CGRectMake(0.0, -height, screenWidth, height)
+        case .toRight:
+            frame = CGRect(x: -screenWidth, y: 0.0, width: screenWidth, height: height)
+        case .toLeft:
+            frame = CGRect(x: screenWidth, y: 0.0, width: screenWidth, height: height)
+        case .normal:
+            frame = CGRect(x: 0.0, y: -height, width: screenWidth, height: height)
         }
         return frame
     }
     
-    private func getFrameOfBottomPositionBy(direction: AnimationDirection) -> CGRect {
+    fileprivate func getFrameOfBottomPositionBy(_ direction: AnimationDirection) -> CGRect {
         let frame: CGRect
         switch direction {
-        case .ToRight:
-            frame = CGRectMake(-screenWidth, screenHeight - height, screenWidth, height)
-        case .ToLeft:
-            frame = CGRectMake(screenWidth, screenHeight - height, screenWidth, height)
-        case .Normal:
-            frame = CGRectMake(0.0, screenHeight + height, screenWidth, height)
+        case .toRight:
+            frame = CGRect(x: -screenWidth, y: screenHeight - height, width: screenWidth, height: height)
+        case .toLeft:
+            frame = CGRect(x: screenWidth, y: screenHeight - height, width: screenWidth, height: height)
+        case .normal:
+            frame = CGRect(x: 0.0, y: screenHeight + height, width: screenWidth, height: height)
         }
         return frame
     }
     
     
     
-    @objc private func viewDidTap() {
+    @objc fileprivate func viewDidTap() {
         didTapBlock?()
         hide(self)
     }
@@ -174,51 +174,51 @@ public class JDropDownAlert: UIButton {
     
     
     // MARK: - Hub methods
-    @objc private func show(title: String, message: String?, textColor: UIColor?, backgroundColor: UIColor?) {
+    @objc fileprivate func show(_ title: String, message: String?, textColor: UIColor?, backgroundColor: UIColor?) {
         
         addWindowSubview(self)
         configureProperties(title, message: message, textColor: textColor, backgroundColor: backgroundColor)
         
-        UIView.animateWithDuration(self.duration) {
+        UIView.animate(withDuration: self.duration, animations: {
             
             switch self.direction {
-            case .ToRight:
+            case .toRight:
                 self.frame.origin.x = 0
-            case .ToLeft:
+            case .toLeft:
                 self.frame.origin.x = 0
-            case .Normal:
-                self.position == .Top ? (self.frame.origin.y = 0) : (self.frame.origin.y = self.screenHeight-self.height)
+            case .normal:
+                self.position == .top ? (self.frame.origin.y = 0) : (self.frame.origin.y = self.screenHeight-self.height)
             }
-        }
-        performSelector(#selector(hide), withObject: self, afterDelay: self.delay)
+        }) 
+        perform(#selector(hide), with: self, afterDelay: self.delay)
     }
     
-    @objc private func hide(alertView: UIButton) {
+    @objc fileprivate func hide(_ alertView: UIButton) {
         
-        UIView.animateWithDuration(duration) {
+        UIView.animate(withDuration: duration, animations: {
             
             switch self.direction {
-            case .ToRight:
+            case .toRight:
                 self.frame.origin.x = -self.screenWidth
-            case .ToLeft:
+            case .toLeft:
                 self.frame.origin.x = self.screenWidth
-            case .Normal:
-                (self.position == .Top) ? (alertView.frame.origin.y = -self.height) : (alertView.frame.origin.y = self.screenHeight)
+            case .normal:
+                (self.position == .top) ? (alertView.frame.origin.y = -self.height) : (alertView.frame.origin.y = self.screenHeight)
             }
-        }
+        }) 
         
-        performSelector(#selector(remove), withObject: alertView, afterDelay: delay)
+        perform(#selector(remove), with: alertView, afterDelay: delay)
     }
     
     
     
-    @objc private func addWindowSubview(view: UIView) {
+    @objc fileprivate func addWindowSubview(_ view: UIView) {
         if self.superview == nil {
-            let frontToBackWindows = UIApplication.sharedApplication().windows.reverse()
+            let frontToBackWindows = UIApplication.shared.windows.reversed()
             for window in frontToBackWindows {
                 if window.windowLevel == UIWindowLevelNormal
-                    && !window.hidden
-                    && window.frame != CGRectZero {
+                    && !window.isHidden
+                    && window.frame != CGRect.zero {
                     window.addSubview(view)
                     return
                 }
@@ -226,22 +226,22 @@ public class JDropDownAlert: UIButton {
         }
     }
     
-    @objc private func remove(alertView: UIButton) {
+    @objc fileprivate func remove(_ alertView: UIButton) {
         alertView.removeFromSuperview()
     }
     
     
     
-    @objc private func configureProperties(title: String, message: String?, textColor: UIColor?, backgroundColor: UIColor?) {
+    @objc fileprivate func configureProperties(_ title: String, message: String?, textColor: UIColor?, backgroundColor: UIColor?) {
         topLabel.text = title
         
         if let message = message {
             messageLabel.text = message
         }else {
-            messageLabel.hidden = true
+            messageLabel.isHidden = true
             topLabel.frame.origin.y = height/2
             
-            if self.position == .Bottom {
+            if self.position == .bottom {
                 topLabel.frame.origin.y = height/2 - topLabel.frame.height/2
             }
         }
@@ -259,9 +259,9 @@ public class JDropDownAlert: UIButton {
     
     
     // MARK: Interface
-    public func alertWith(title: String,
+    open func alertWith(_ title: String,
                           message: String? = nil,
-                          textColor: UIColor = UIColor.whiteColor(),
+                          textColor: UIColor = UIColor.white,
                           backgroundColor: UIColor = UIColor.lightRed()) {
         self.delay = 2.0
         show(title,
@@ -270,9 +270,9 @@ public class JDropDownAlert: UIButton {
              backgroundColor: backgroundColor)
     }
     
-    public func alertWith(title: String,
+    open func alertWith(_ title: String,
                           message: String? = nil,
-                          textColor: UIColor = UIColor.whiteColor(),
+                          textColor: UIColor = UIColor.white,
                           backgroundColor: UIColor = UIColor.lightRed(),
                           delay:Double) {
         self.delay = delay
