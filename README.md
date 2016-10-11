@@ -41,7 +41,12 @@ Simple DropDown Alert View For Any iOS Projects.
     }
     
     let alert = JDropDownAlert(position: .top, direction: .toRight)
-    alert.alertWith(titleString, message: messageString)
+    alert.alertWith(titleString, message: messageString, topLabelColor: UIColor.white, messageLabelColor: UIColor.darkGray, backgroundColor: UIColor.brown)
+
+//  alert.alertWith(titleString, message: messageString, topLabelColor: UIColor.white, messageLabelColor: UIColor.darkGray)
+//  alert.alertWith(titleString, message: messageString, topLabelColor: UIColor.white)
+//  alert.alertWith(titleString, message: messageString)
+
     
     alert.didTapBlock = {
       print("Top View Did Tapped")
