@@ -6,7 +6,7 @@
 [![Version](https://img.shields.io/cocoapods/v/JDropDownAlert.svg?style=flat)](http://cocoapods.org/pods/JDropDownAlert)
 [![License](https://img.shields.io/cocoapods/l/JDropDownAlert.svg?style=flat)](http://cocoapods.org/pods/JDropDownAlert)
 [![Build Status](https://travis-ci.org/trilliwon/JDropDownAlert.svg?branch=master)](https://travis-ci.org/trilliwon/JDropDownAlert)
-[![codecov](https://codecov.io/gh/trilliwon/trilliwon/branch/master/graph/badge.svg)](https://codecov.io/gh/trilliwon/JDropDownAlert)
+[![codecov](https://codecov.io/gh/trilliwon/JDropDownAlert/branch/master/graph/badge.svg)](https://codecov.io/gh/trilliwon/JDropDownAlert)
 [![Issues](https://img.shields.io/github/issues/trillione/JDropDownAlert.svg?style=flat)](https://github.com/trillione/JDropDownAlert/issues?state=open)
 
 ## JDropDownALert

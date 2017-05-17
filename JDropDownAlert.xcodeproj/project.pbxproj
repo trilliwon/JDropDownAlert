@@ -15,6 +15,7 @@
 		E3E95DF41ECC443B001BC0AA /* JDropDownAlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E95DF31ECC443B001BC0AA /* JDropDownAlertTests.swift */; };
 		E3E95DFF1ECC448A001BC0AA /* JDropDownAlert.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E3E95DFE1ECC448A001BC0AA /* JDropDownAlert.podspec */; };
 		E3E95E031ECC4624001BC0AA /* JDropDownAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E95E021ECC4624001BC0AA /* JDropDownAlert.swift */; };
+		E3EB031C1ECC727E00F98008 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E3EB031B1ECC727E00F98008 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		E3E95DF51ECC443B001BC0AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3E95DFE1ECC448A001BC0AA /* JDropDownAlert.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JDropDownAlert.podspec; sourceTree = "<group>"; };
 		E3E95E021ECC4624001BC0AA /* JDropDownAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JDropDownAlert.swift; path = Source/JDropDownAlert.swift; sourceTree = "<group>"; };
+		E3EB031B1ECC727E00F98008 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				E3E95DFE1ECC448A001BC0AA /* JDropDownAlert.podspec */,
+				E3EB031B1ECC727E00F98008 /* README.md */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			files = (
 				E3E95DE11ECC443B001BC0AA /* ViewController.swift in Sources */,
 				E3E95DDF1ECC443B001BC0AA /* AppDelegate.swift in Sources */,
+				E3EB031C1ECC727E00F98008 /* README.md in Sources */,
 				E3E95E031ECC4624001BC0AA /* JDropDownAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +442,7 @@
 				E3E95DFA1ECC443B001BC0AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E3E95DFB1ECC443B001BC0AA /* Build configuration list for PBXNativeTarget "JDropDownAlertTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +451,7 @@
 				E3E95DFD1ECC443B001BC0AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
