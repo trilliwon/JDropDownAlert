@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Pk5-hn-kkU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="CXk-AB-Hs5">
+            <objects>
+                <viewController id="Pk5-hn-kkU" customClass="ViewController" customModule="JDropDownAlert" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SaQ-LG-xNh"/>
+                        <viewControllerLayoutGuide type="bottom" id="shJ-DX-33e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YEk-5i-ZAW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBB-nh-Xao">
+                                <rect key="frame" x="130.5" y="330" width="114" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="BOTTOM ALERT">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="bottomAlertAction" destination="Pk5-hn-kkU" eventType="touchUpInside" id="XjW-kk-wqT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7o-QG-jiL">
+                                <rect key="frame" x="147.5" y="120" width="80" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="TOP ALERT">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="topAlertAction" destination="Pk5-hn-kkU" eventType="touchUpInside" id="Z9F-fj-m62"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HN8-iM-i3a">
+                                <rect key="frame" x="135.5" y="200" width="104" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="TOP TO RIGHT">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="topToRightAlertAction" destination="Pk5-hn-kkU" eventType="touchUpInside" id="AEu-dA-gDy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBI-BJ-tQw">
+                                <rect key="frame" x="119" y="410" width="137" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="BOTTOM TO RIGHT">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="bottomToRightAlertAction" destination="Pk5-hn-kkU" eventType="touchUpInside" id="6M6-2L-6Ki"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CkT-14-y6G">
+                                <rect key="frame" x="124" y="370" width="127" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="BOTTOM TO LEFT">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="bottomToLeftAlertAction" destination="Pk5-hn-kkU" eventType="touchUpInside" id="JCv-W1-ioe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNG-7f-Bnp">
+                                <rect key="frame" x="141" y="160" width="93" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="TOP TO LEFT">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="topToLeftAlertAction" destination="Pk5-hn-kkU" eventType="touchUpInside" id="TMa-dh-UiH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.46274509800000002" green="0.4823529412" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CkT-14-y6G" firstAttribute="centerX" secondItem="YEk-5i-ZAW" secondAttribute="centerX" id="19c-In-TxO"/>
+                            <constraint firstItem="rBB-nh-Xao" firstAttribute="centerX" secondItem="YEk-5i-ZAW" secondAttribute="centerX" id="6YZ-eq-Cs2"/>
+                            <constraint firstItem="HN8-iM-i3a" firstAttribute="top" secondItem="DNG-7f-Bnp" secondAttribute="bottom" constant="10" id="AHf-Mi-XrP"/>
+                            <constraint firstItem="rBB-nh-Xao" firstAttribute="top" secondItem="HN8-iM-i3a" secondAttribute="bottom" constant="100" id="Ebw-w6-6td"/>
+                            <constraint firstItem="CkT-14-y6G" firstAttribute="top" secondItem="rBB-nh-Xao" secondAttribute="bottom" constant="10" id="Gh3-2Z-DMF"/>
+                            <constraint firstItem="l7o-QG-jiL" firstAttribute="centerX" secondItem="YEk-5i-ZAW" secondAttribute="centerX" id="UlY-o2-Yi1"/>
+                            <constraint firstItem="DNG-7f-Bnp" firstAttribute="centerX" secondItem="YEk-5i-ZAW" secondAttribute="centerX" id="cQ9-fW-T6h"/>
+                            <constraint firstItem="HN8-iM-i3a" firstAttribute="centerX" secondItem="YEk-5i-ZAW" secondAttribute="centerX" id="cnW-p7-gMu"/>
+                            <constraint firstItem="l7o-QG-jiL" firstAttribute="top" secondItem="SaQ-LG-xNh" secondAttribute="bottom" constant="100" id="eTK-n8-7nR"/>
+                            <constraint firstItem="IBI-BJ-tQw" firstAttribute="centerX" secondItem="YEk-5i-ZAW" secondAttribute="centerX" id="ekh-yx-urr"/>
+                            <constraint firstItem="IBI-BJ-tQw" firstAttribute="top" secondItem="CkT-14-y6G" secondAttribute="bottom" constant="10" id="p3s-8t-r4i"/>
+                            <constraint firstItem="DNG-7f-Bnp" firstAttribute="top" secondItem="l7o-QG-jiL" secondAttribute="bottom" constant="10" id="rwg-oM-ngG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BH6-dt-KNM" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

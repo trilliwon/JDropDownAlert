@@ -3,7 +3,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JDropDownAlert'
-  s.version          = '1.0.2'
+  s.version          = '1.1.0'
   s.summary          = 'JDropDownAlert Is Simple Alert View For iOS Application.'
   s.pod_target_xcconfig = {
     'SWIFT_VERSION' => '3.0'
@@ -20,7 +20,7 @@ JDropDownAlert Is Simple Alert View For iOS Application. JDropDownAlert Has a Ti
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'JDropDownAlert/Classes/*'
+  s.source_files = 'Source/*'
 
   s.frameworks = 'UIKit'
 end

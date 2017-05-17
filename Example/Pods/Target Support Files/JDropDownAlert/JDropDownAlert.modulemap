@@ -1,6 +1,0 @@
-framework module JDropDownAlert {
-  umbrella header "JDropDownAlert-umbrella.h"
-
-  export *
-  module * { export * }
-}

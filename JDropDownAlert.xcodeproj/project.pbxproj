@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E3E95DDF1ECC443B001BC0AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E95DDE1ECC443B001BC0AA /* AppDelegate.swift */; };
+		E3E95DE11ECC443B001BC0AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E95DE01ECC443B001BC0AA /* ViewController.swift */; };
+		E3E95DE41ECC443B001BC0AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3E95DE21ECC443B001BC0AA /* Main.storyboard */; };
+		E3E95DE61ECC443B001BC0AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3E95DE51ECC443B001BC0AA /* Assets.xcassets */; };
+		E3E95DE91ECC443B001BC0AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3E95DE71ECC443B001BC0AA /* LaunchScreen.storyboard */; };
+		E3E95DF41ECC443B001BC0AA /* JDropDownAlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E95DF31ECC443B001BC0AA /* JDropDownAlertTests.swift */; };
+		E3E95DFF1ECC448A001BC0AA /* JDropDownAlert.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E3E95DFE1ECC448A001BC0AA /* JDropDownAlert.podspec */; };
+		E3E95E031ECC4624001BC0AA /* JDropDownAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E95E021ECC4624001BC0AA /* JDropDownAlert.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E3E95DF01ECC443B001BC0AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3E95DD31ECC443B001BC0AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3E95DDA1ECC443B001BC0AA;
+			remoteInfo = JDropDownAlert;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E3E95DDB1ECC443B001BC0AA /* JDropDownAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JDropDownAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3E95DDE1ECC443B001BC0AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E3E95DE01ECC443B001BC0AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E3E95DE31ECC443B001BC0AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E3E95DE51ECC443B001BC0AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E3E95DE81ECC443B001BC0AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E3E95DEA1ECC443B001BC0AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3E95DEF1ECC443B001BC0AA /* JDropDownAlertTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JDropDownAlertTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3E95DF31ECC443B001BC0AA /* JDropDownAlertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDropDownAlertTests.swift; sourceTree = "<group>"; };
+		E3E95DF51ECC443B001BC0AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3E95DFE1ECC448A001BC0AA /* JDropDownAlert.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JDropDownAlert.podspec; sourceTree = "<group>"; };
+		E3E95E021ECC4624001BC0AA /* JDropDownAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JDropDownAlert.swift; path = Source/JDropDownAlert.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E3E95DD81ECC443B001BC0AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3E95DEC1ECC443B001BC0AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E3E95DD21ECC443B001BC0AA = {
+			isa = PBXGroup;
+			children = (
+				E3E95E001ECC449C001BC0AA /* Podspec Metadata */,
+				E3E95E011ECC4609001BC0AA /* Source */,
+				E3E95DDD1ECC443B001BC0AA /* JDropDownAlert */,
+				E3E95DF21ECC443B001BC0AA /* JDropDownAlertTests */,
+				E3E95DDC1ECC443B001BC0AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E3E95DDC1ECC443B001BC0AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E3E95DDB1ECC443B001BC0AA /* JDropDownAlert.app */,
+				E3E95DEF1ECC443B001BC0AA /* JDropDownAlertTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E3E95DDD1ECC443B001BC0AA /* JDropDownAlert */ = {
+			isa = PBXGroup;
+			children = (
+				E3E95DDE1ECC443B001BC0AA /* AppDelegate.swift */,
+				E3E95DE01ECC443B001BC0AA /* ViewController.swift */,
+				E3E95DE21ECC443B001BC0AA /* Main.storyboard */,
+				E3E95DE51ECC443B001BC0AA /* Assets.xcassets */,
+				E3E95DE71ECC443B001BC0AA /* LaunchScreen.storyboard */,
+				E3E95DEA1ECC443B001BC0AA /* Info.plist */,
+			);
+			path = JDropDownAlert;
+			sourceTree = "<group>";
+		};
+		E3E95DF21ECC443B001BC0AA /* JDropDownAlertTests */ = {
+			isa = PBXGroup;
+			children = (
+				E3E95DF31ECC443B001BC0AA /* JDropDownAlertTests.swift */,
+				E3E95DF51ECC443B001BC0AA /* Info.plist */,
+			);
+			path = JDropDownAlertTests;
+			sourceTree = "<group>";
+		};
+		E3E95E001ECC449C001BC0AA /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				E3E95DFE1ECC448A001BC0AA /* JDropDownAlert.podspec */,
+			);
+			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		E3E95E011ECC4609001BC0AA /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				E3E95E021ECC4624001BC0AA /* JDropDownAlert.swift */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E3E95DDA1ECC443B001BC0AA /* JDropDownAlert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3E95DF81ECC443B001BC0AA /* Build configuration list for PBXNativeTarget "JDropDownAlert" */;
+			buildPhases = (
+				E3E95DD71ECC443B001BC0AA /* Sources */,
+				E3E95DD81ECC443B001BC0AA /* Frameworks */,
+				E3E95DD91ECC443B001BC0AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JDropDownAlert;
+			productName = JDropDownAlert;
+			productReference = E3E95DDB1ECC443B001BC0AA /* JDropDownAlert.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E3E95DEE1ECC443B001BC0AA /* JDropDownAlertTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3E95DFB1ECC443B001BC0AA /* Build configuration list for PBXNativeTarget "JDropDownAlertTests" */;
+			buildPhases = (
+				E3E95DEB1ECC443B001BC0AA /* Sources */,
+				E3E95DEC1ECC443B001BC0AA /* Frameworks */,
+				E3E95DED1ECC443B001BC0AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E3E95DF11ECC443B001BC0AA /* PBXTargetDependency */,
+			);
+			name = JDropDownAlertTests;
+			productName = JDropDownAlertTests;
+			productReference = E3E95DEF1ECC443B001BC0AA /* JDropDownAlertTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E3E95DD31ECC443B001BC0AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Won;
+				TargetAttributes = {
+					E3E95DDA1ECC443B001BC0AA = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = J2WX5LW4CC;
+						ProvisioningStyle = Automatic;
+					};
+					E3E95DEE1ECC443B001BC0AA = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = J2WX5LW4CC;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E3E95DDA1ECC443B001BC0AA;
+					};
+				};
+			};
+			buildConfigurationList = E3E95DD61ECC443B001BC0AA /* Build configuration list for PBXProject "JDropDownAlert" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E3E95DD21ECC443B001BC0AA;
+			productRefGroup = E3E95DDC1ECC443B001BC0AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E3E95DDA1ECC443B001BC0AA /* JDropDownAlert */,
+				E3E95DEE1ECC443B001BC0AA /* JDropDownAlertTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E3E95DD91ECC443B001BC0AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3E95DE91ECC443B001BC0AA /* LaunchScreen.storyboard in Resources */,
+				E3E95DFF1ECC448A001BC0AA /* JDropDownAlert.podspec in Resources */,
+				E3E95DE61ECC443B001BC0AA /* Assets.xcassets in Resources */,
+				E3E95DE41ECC443B001BC0AA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3E95DED1ECC443B001BC0AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E3E95DD71ECC443B001BC0AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3E95DE11ECC443B001BC0AA /* ViewController.swift in Sources */,
+				E3E95DDF1ECC443B001BC0AA /* AppDelegate.swift in Sources */,
+				E3E95E031ECC4624001BC0AA /* JDropDownAlert.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3E95DEB1ECC443B001BC0AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3E95DF41ECC443B001BC0AA /* JDropDownAlertTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E3E95DF11ECC443B001BC0AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3E95DDA1ECC443B001BC0AA /* JDropDownAlert */;
+			targetProxy = E3E95DF01ECC443B001BC0AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E3E95DE21ECC443B001BC0AA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E3E95DE31ECC443B001BC0AA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E3E95DE71ECC443B001BC0AA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E3E95DE81ECC443B001BC0AA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E3E95DF61ECC443B001BC0AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E3E95DF71ECC443B001BC0AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E3E95DF91ECC443B001BC0AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J2WX5LW4CC;
+				INFOPLIST_FILE = JDropDownAlert/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.trilliwon.JDropDownAlert;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E3E95DFA1ECC443B001BC0AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J2WX5LW4CC;
+				INFOPLIST_FILE = JDropDownAlert/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.trilliwon.JDropDownAlert;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		E3E95DFC1ECC443B001BC0AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = J2WX5LW4CC;
+				INFOPLIST_FILE = JDropDownAlertTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.trilliwon.JDropDownAlertTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JDropDownAlert.app/JDropDownAlert";
+			};
+			name = Debug;
+		};
+		E3E95DFD1ECC443B001BC0AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = J2WX5LW4CC;
+				INFOPLIST_FILE = JDropDownAlertTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.trilliwon.JDropDownAlertTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JDropDownAlert.app/JDropDownAlert";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E3E95DD61ECC443B001BC0AA /* Build configuration list for PBXProject "JDropDownAlert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3E95DF61ECC443B001BC0AA /* Debug */,
+				E3E95DF71ECC443B001BC0AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3E95DF81ECC443B001BC0AA /* Build configuration list for PBXNativeTarget "JDropDownAlert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3E95DF91ECC443B001BC0AA /* Debug */,
+				E3E95DFA1ECC443B001BC0AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E3E95DFB1ECC443B001BC0AA /* Build configuration list for PBXNativeTarget "JDropDownAlertTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3E95DFC1ECC443B001BC0AA /* Debug */,
+				E3E95DFD1ECC443B001BC0AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E3E95DD31ECC443B001BC0AA /* Project object */;
+}
