@@ -2,7 +2,6 @@
 
 [![Language](http://img.shields.io/badge/language-swift-brightgreen.svg?style=flat
 )](https://developer.apple.com/swift)
-[![CI Status](http://img.shields.io/travis/Steve Jo/JDropDownAlert.svg?style=flat)](https://travis-ci.org/Steve Jo/JDropDownAlert)
 [![Version](https://img.shields.io/cocoapods/v/JDropDownAlert.svg?style=flat)](http://cocoapods.org/pods/JDropDownAlert)
 [![License](https://img.shields.io/cocoapods/l/JDropDownAlert.svg?style=flat)](http://cocoapods.org/pods/JDropDownAlert)
 [![Platform](https://img.shields.io/cocoapods/p/JDropDownAlert.svg?style=flat)](http://cocoapods.org/pods/JDropDownAlert)
