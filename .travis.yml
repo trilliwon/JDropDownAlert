@@ -1,5 +1,7 @@
 language: swift
 osx_image: xcode8.3
 
-script: xcodebuild test -project JDropDownAlert.xcodeproj -scheme JDropDownAlert -destination 'platform=iOS Simulator,name=iPhone 7' 
+script: 
+  - xcodebuild -project JDropDownAlert.xcodeproj -scheme JDropDownAlert -destination 'platform=iOS Simulator,name=iPhone 7' 
+  - xcodebuild test -project JDropDownAlert.xcodeproj -scheme JDropDownAlert -destination 'platform=iOS Simulator,name=iPhone 7' 
 after_success: bash <(curl -s https://codecov.io/bash) -J 'JDropDownAlert'
