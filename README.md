@@ -1,5 +1,8 @@
 # JDropDownAlert
-
+![Swift](https://img.shields.io/badge/Swift-3.0-orange.svg)
+[![CI Status](http://img.shields.io/travis/trilliwon/ifAction.svg?style=flat)](https://travis-ci.org/trilliwon/ifAction)
+![spm](https://img.shields.io/badge/SPM-ready-orange.svg)
+[![codecov](https://codecov.io/gh/trilliwon/trilliwon/branch/master/graph/badge.svg)](https://codecov.io/gh/trilliwon/JDropDownAlert)
 [![Language](http://img.shields.io/badge/language-swift-brightgreen.svg?style=flat
 )](https://developer.apple.com/swift)
 [![Version](https://img.shields.io/cocoapods/v/JDropDownAlert.svg?style=flat)](http://cocoapods.org/pods/JDropDownAlert)

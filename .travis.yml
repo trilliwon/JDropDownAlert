@@ -2,4 +2,5 @@ language: objective-c
 osx_image: xcode8.3
 
 script:
-- set -o pipefail && xcodebuild test -project JDropDownAlert.xcodeproj -scheme JDropDownAlert -destination 'platform=iOS Simulator,name=iPhone 7' 
+ - xcodebuild test -project JDropDownAlert.xcodeproj -scheme JDropDownAlert -destination 'platform=iOS Simulator,name=iPhone 7' 
+ - bash <(curl -s https://codecov.io/bash) -J 'JDropDownAlert'
