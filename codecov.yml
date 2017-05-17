@@ -80,9 +80,11 @@ coverage:
         - master
       ignore:
         - JDropDownAlertTests/*
+        - JDropDownAlert/*
 
   ignore: # files and folders for processing
     - JDropDownAlertTests/*
+    - JDropDownAlert/*
 
 comment:
   layout: reach, diff, flags, files
