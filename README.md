@@ -1,6 +1,5 @@
 # JDropDownAlert
 ![Swift](https://img.shields.io/badge/Swift-3.0-orange.svg)
-[![CI Status](http://img.shields.io/travis/trilliwon/ifAction.svg?style=flat)](https://travis-ci.org/trilliwon/ifAction)
 ![spm](https://img.shields.io/badge/SPM-ready-orange.svg)
 [![codecov](https://codecov.io/gh/trilliwon/trilliwon/branch/master/graph/badge.svg)](https://codecov.io/gh/trilliwon/JDropDownAlert)
 [![Language](http://img.shields.io/badge/language-swift-brightgreen.svg?style=flat
@@ -9,6 +8,8 @@
 [![License](https://img.shields.io/cocoapods/l/JDropDownAlert.svg?style=flat)](http://cocoapods.org/pods/JDropDownAlert)
 [![Platform](https://img.shields.io/cocoapods/p/JDropDownAlert.svg?style=flat)](http://cocoapods.org/pods/JDropDownAlert)
 [![Issues](https://img.shields.io/github/issues/trillione/JDropDownAlert.svg?style=flat)](https://github.com/trillione/JDropDownAlert/issues?state=open)
+[![Build Status](https://travis-ci.org/trilliwon/JDropDownAlert.svg?branch=master)](https://travis-ci.org/trilliwon/JDropDownAlert)
+
 ## JDropDownALert
 Simple DropDown Alert View For Any iOS Projects.
 
@@ -97,8 +98,6 @@ Simple DropDown Alert View For Any iOS Projects.
   }
 ```
 
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 
 ## Requirements
