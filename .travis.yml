@@ -1,7 +1,9 @@
 language: swift
 osx_image: xcode8.3
+script: travis/travis.sh
 
-script: 
-  - xcodebuild -project JDropDownAlert.xcodeproj -scheme JDropDownAlert -destination 'platform=iOS Simulator,name=iPhone 7' 
-  - xcodebuild test -project JDropDownAlert.xcodeproj -scheme JDropDownAlert -destination 'platform=iOS Simulator,name=iPhone 7' 
-after_success: bash <(curl -s https://codecov.io/bash) -J 'JDropDownAlert'
+before_install:
+  - gem install xcpretty
+after_success:
+  - travis/travis_after_success.sh
+  - bash <(curl -s https://codecov.io/bash)
