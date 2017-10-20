@@ -40,9 +40,9 @@ open class JDropDownAlert: UIButton {
   
   // default values
   // You can change this values to customize
-  var height: CGFloat = 70
-  var duration = 0.3
-  var delay: Double = 2.0
+  open var height: CGFloat = 70
+  open var duration = 0.3
+  open var delay: Double = 2.0
   
   fileprivate var titleFrame: CGRect!
   fileprivate var topLabel = UILabel()
