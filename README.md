@@ -1,6 +1,6 @@
 # JDropDownAlert
 
-![Swift](https://img.shields.io/badge/Swift-3.0-orange.svg)
+![Swift](https://img.shields.io/badge/Swift-4.0-orange.svg)
 [![Platform](https://img.shields.io/cocoapods/p/JDropDownAlert.svg?style=flat)](http://cocoapods.org/pods/JDropDownAlert)
 ![spm](https://img.shields.io/badge/SPM-ready-orange.svg)
 [![Version](https://img.shields.io/cocoapods/v/JDropDownAlert.svg?style=flat)](http://cocoapods.org/pods/JDropDownAlert)
