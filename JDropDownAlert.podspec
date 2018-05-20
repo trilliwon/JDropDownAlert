@@ -3,7 +3,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JDropDownAlert'
-  s.version          = '1.2.0'
+  s.version          = '1.3.0'
   s.summary          = 'JDropDownAlert Is Simple Alert View For iOS Application.'
   s.pod_target_xcconfig = {
     'SWIFT_VERSION' => '4.0'
