@@ -1,3 +1,5 @@
+⚠️ DEPRECATED, NO LONGER MAINTAINED
+
 # JDropDownAlert
 
 ![Swift](https://img.shields.io/badge/Swift-4.0-orange.svg)
