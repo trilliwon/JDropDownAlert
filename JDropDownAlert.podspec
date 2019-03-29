@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.version          = '1.3.0'
   s.summary          = 'JDropDownAlert Is Simple Alert View For iOS Application.'
   s.pod_target_xcconfig = {
-    'SWIFT_VERSION' => '4.0'
+    'SWIFT_VERSION' => '4.2'
   }
   s.description      = <<-DESC
 JDropDownAlert Is Simple Alert View For iOS Application. JDropDownAlert Has a TitleLabel and a MessageLabel. You Can Use Both Or Just TitleLabel. Supports Positions and Animation Directoins
