@@ -285,3 +285,14 @@ extension UIColor {
         return UIColor(red: 255/255, green: 102/255, blue: 102/255, alpha: 0.9)
     }
 }
+
+extension UIDevice {
+    var hasNotch: Bool {
+        if #available(iOS 11.0, *) {
+            let bottom = UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0
+            return bottom > 0
+        } else {
+            return false
+        }
+    }
+}
