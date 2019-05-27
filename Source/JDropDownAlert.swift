@@ -40,7 +40,14 @@ public class JDropDownAlert: UIButton {
     
     // default values
     // You can change this values to customize
-    public var height: CGFloat = 70
+    public var height: CGFloat {
+        if UIDevice.current.hasNotch {
+            return 100
+        }
+        
+        return 70
+    }
+    
     public var duration = 0.3
     public var delay: Double = 2.0
     
