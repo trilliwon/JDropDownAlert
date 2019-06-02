@@ -216,7 +216,7 @@ public class JDropDownAlert: UIButton {
         if self.superview == nil {
             let frontToBackWindows = UIApplication.shared.windows.reversed()
             for window in frontToBackWindows {
-                if window.windowLevel == UIWindowLevelNormal
+                if window.windowLevel == UIWindow.Level.normal
                     && !window.isHidden
                     && window.frame != CGRect.zero {
                     window.addSubview(view)
