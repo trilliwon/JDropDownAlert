@@ -40,7 +40,14 @@ public class JDropDownAlert: UIButton {
     
     // default values
     // You can change this values to customize
-    public var height: CGFloat = 70
+    public var height: CGFloat {
+        if UIDevice.current.hasNotch {
+            return 100
+        }
+        
+        return 70
+    }
+    
     public var duration = 0.3
     public var delay: Double = 2.0
     
@@ -283,5 +290,16 @@ public class JDropDownAlert: UIButton {
 extension UIColor {
     public static var lightRed: UIColor {
         return UIColor(red: 255/255, green: 102/255, blue: 102/255, alpha: 0.9)
+    }
+}
+
+extension UIDevice {
+    var hasNotch: Bool {
+        if #available(iOS 11.0, *) {
+            let bottom = UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0
+            return bottom > 0
+        } else {
+            return false
+        }
     }
 }
